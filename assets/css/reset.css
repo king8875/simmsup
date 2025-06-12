@@ -1,0 +1,40 @@
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+:root{
+    --primary-blue : #1D95D4;
+    --primary-green : #2BA449;
+    --primary-yellow : #E99A21;
+
+    --font-eb : 800;
+    --font-b : 700;
+    --font-sb : 600;
+    --font-m : 500;
+
+    --fc-subtit : #585656;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+}
+
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+ul{list-style: none;}
+fieldset,input{border: 0;}
+img, picture, video, canvas, svg {display: block;max-width:100%;object-fit: cover;}
+section{ position: relative; }
+
+
+body{
+    position: relative;
+    word-break: keep-all;
+    font-family: "Pretendard", sans-serif !important;
+    letter-spacing: -0.025em;
+}

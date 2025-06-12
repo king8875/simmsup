@@ -1,0 +1,67 @@
+@import './reset.css';
+@import './common.css';
+
+
+.header{
+    position: relative;
+}
+.header .header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto;
+
+}
+.header .header_inner .header_logo--block{
+
+}
+.header .header_inner .header_logo--block a{
+    display: block;
+}
+.header .header_inner .header_logo--block a img{}
+
+
+.header .header_inner .header_nav--block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.header .header_inner .header_nav--block .header_nav--list{
+    display: flex;
+    gap: 50px;
+}
+.header .header_inner .header_nav--block .header_nav--item{}
+.header_nav--item a{
+    display: block;
+    font-size: 18px;
+    font-weight: var(--font-b);
+}
+
+.header .header_inner .header_nav--block .header_sidebar--btn{
+    width: 22px;
+    height: 22px;
+    background: #000;
+}
+
+.header .header_inner .header_don--block{
+    width: 103px;
+    height: 42px;
+}
+.header .header_inner .header_don--block .don--btn{
+    font-size: 16px;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: var(--font-b);
+    transition: all 0.3s ease;
+}
+.header .header_inner .header_don--block .don--btn:hover{
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, var(--primary-blue));
+}

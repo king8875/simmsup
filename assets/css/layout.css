@@ -65,3 +65,92 @@
     transition: all 0.3s ease;
     background: linear-gradient(to right, var(--primary-blue));
 }
+
+
+
+
+
+/* footer */
+
+.footer{
+    background: #0d0d0d;
+    padding: 60px 0;
+}
+.footer_content{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    color: #fff;
+}
+.footer_content .footer_top--block{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: var(--font-b);
+    opacity: 0.4;
+}
+.footer_content .footer_top--block .footer_nav--list{
+    display: flex;
+    align-items: center;
+}
+.footer_content .footer_top--block .footer_nav--list .footer_nav--item{
+    position: relative;
+    margin-right: 20px;
+}
+.footer_content .footer_top--block .footer_nav--list .footer_nav--item::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+}
+.footer_content .footer_top--block .footer_nav--list .footer_nav--item:last-child::after{
+    display: none;
+}
+.footer_content .footer_top--block .footer_nav--list .footer_nav--item a{}
+.footer_content .footer_top--block .footer_location{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer_content .footer_top--block .footer_location .footer_download--btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    font-weight: var(--font-b);
+    font-size: 20px;
+    color: #fff;
+}
+.footer_content .footer_top--block .footer_location div{
+    display: flex;
+    gap: 15px;
+}
+.footer_content .footer_top--block .footer_location div p{}
+
+
+
+
+
+.footer_bottom--block{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top: 1px solid #fff;
+}
+.footer_bottom--block .copyrights{
+    opacity: 0.2;
+    font-size: 14px;
+}
+.footer_bottom--block .footer_sns--list{
+    display: flex;
+    gap: 30px;
+}
+.footer_bottom--block .footer_sns--item{}

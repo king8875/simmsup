@@ -17,6 +17,8 @@
     <script src="assets/js/index.js" defer></script>
 </head>
 <body>
+
+
     <header class="header">
         <div class="header_inner">
             <div class="header_logo--block">
@@ -48,11 +50,19 @@
             </div>
         </div>
     </header>
+
+
+
+
     <main>
         <div class="wrapper">
 
 
 
+            <div id="loading-overlay">
+                <img src="assets/img/header/logo.svg" alt="로딩 중..." />
+            </div>
+              
             <section class="hero_section">
                 <div class="swiper" id="heroSwiper">
                     <ul class="swiper-wrapper">
@@ -169,7 +179,7 @@
                     <div class="together_content">
                         <div class="tg--left">
                             <div class="main-tit">섬즈업 함께하기</div>
-                            <div class="main-subtit">
+                            <div class="tg_subtit main-subtit">
                                 개인 또는 단체의 후원금은 섬즈업의 활동을 이어나가고,<br />
                                 섬 해양쓰레기 문제실태의 상황을 알리는 목소리를 내는데 사용됩니다.
                             </div>
@@ -239,32 +249,32 @@
                         <div class="flex pj_img_box first">
                             <img src="assets/img/main/project/pj_img01.jpg" alt="">
                             <div class="pj_img_box-tx">
-                                <p>62. 충남 서천 유부도 (2024. 11. 16)</p>
+                                <p>62. 충남 서천 유부도 (2024. 11. 16)11</p>
                             </div>
                         </div>
                         <div class="flex grid_wrapper">
                             <div class="pj_img_box">
                                 <img src="assets/img/main/project/pj_img01.jpg" alt="">
                                 <div class="pj_img_box-tx">
-                                    <p>62. 충남 서천 유부도 (2024. 11. 16)</p>
+                                    <p>62. 충남 서천 유부도 (2024. 11. 16)22</p>
                                 </div>
                             </div>
                             <div class="pj_img_box">
                                 <img src="assets/img/main/project/pj_img01.jpg" alt="">
                                 <div class="pj_img_box-tx">
-                                    <p>62. 충남 서천 유부도 (2024. 11. 16)</p>
+                                    <p>62. 충남 서천 유부도 (2024. 11. 16)33</p>
                                 </div>
                             </div>
                             <div class="pj_img_box">
                                 <img src="assets/img/main/project/pj_img01.jpg" alt="">
                                 <div class="pj_img_box-tx">
-                                    <p>62. 충남 서천 유부도 (2024. 11. 16)</p>
+                                    <p>62. 충남 서천 유부도 (2024. 11. 16)44</p>
                                 </div>
                             </div>
                             <div class="pj_img_box">
                                 <img src="assets/img/main/project/pj_img01.jpg" alt="">
                                 <div class="pj_img_box-tx">
-                                    <p>62. 충남 서천 유부도 (2024. 11. 16)</p>
+                                    <p>62. 충남 서천 유부도 (2024. 11. 16)55</p>
                                 </div>
                             </div>
                         </div>
@@ -358,21 +368,19 @@
                                     <strong>2025년 6월 정기봉사 참가모집</strong>
                                     <span>
                                         <div class="notice_time">2025. 06. 03 (화) 21:00 링크오픈</div>
-                                        <div class="more--block">
-                                            <a href="#">
-                                                <div class="arrow-ic--block">
-                                                    <div class="more_ic first-arrow">
-                                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M18 11H3M18 11L13.7143 15.5M18 11L13.7143 6.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="more_ic second-arrow">
-                                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M18 11H3M18 11L13.7143 15.5M18 11L13.7143 6.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                        </svg>
-                                                    </div>
+                                        <div class="notice_more--block">
+                                            <div class="arrow-ic--block">
+                                                <div class="more_ic first-arrow">
+                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18 11H3M18 11L13.7143 15.5M18 11L13.7143 6.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
                                                 </div>
-                                            </a>
+                                                <div class="more_ic second-arrow">
+                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18 11H3M18 11L13.7143 15.5M18 11L13.7143 6.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                         </div>
                                     </span>
                                 </a>
@@ -391,91 +399,89 @@
             </section>
 
             <div class="marquee--block">
-                <div class="marquee_area">
-                    <div class="marquee_track">
-                        <ul class="marquee_list">
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img01.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img02.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img03.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img04.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img05.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img06.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img07.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img08.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img09.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img10.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img11.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img12.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img13.png" alt="">
-                            </li>
-                        </ul>
-                        <ul class="marquee_list">
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img01.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img02.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img03.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img04.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img05.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img06.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img07.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img08.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img09.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img10.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img11.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img12.png" alt="">
-                            </li>
-                            <li class="marquee_item">
-                                <img src="/assets/img/footer/marquee/marquee_img13.png" alt="">
-                            </li>
-                        </ul>
-                    </div>
+                <div class="marquee_track">
+                    <ul class="marquee_list">
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img01.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img02.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img03.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img04.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img05.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img06.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img07.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img08.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img09.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img10.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img11.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img12.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img13.png" alt="">
+                        </li>
+                    </ul>
+                    <ul class="marquee_list">
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img01.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img02.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img03.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img04.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img05.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img06.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img07.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img08.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img09.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img10.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img11.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img12.png" alt="">
+                        </li>
+                        <li class="marquee_item">
+                            <img src="/assets/img/footer/marquee/marquee_img13.png" alt="">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,6 +1,4 @@
 
-
-
 .blind{
     position: absolute;
     width: 1px;
@@ -15,52 +13,52 @@
     margin: 0 auto;
 }
 
-.btn{
-    cursor: grab;
-}
+.btn{ cursor: grab; }
 .section_header--block{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
 }
 
 
-
-.swiper-button-prev:after, .swiper-button-next:after{
-    display: none;
-}
-
+/* 스와이퍼 버튼 초기화 */
+.swiper-button-prev:after, .swiper-button-next:after{ display: none; }
 
 .main-tit{
     font-size: 34px;
     font-weight: var(--font-b);
+    line-height: 1.2;
 }
 .main-subtit{
     font-size: 18px;
     font-weight: var(--font-b);
     color: var(--fc-subtit);
+    line-height: 1.2;
+}
+.bold_18{
+    font-weight: var(--font-b);
+    font-size: 18px;
 }
 
+
+/* more btn */
+.more--block{
+    position: relative;
+}
+.more--block span{
+    margin-right: 10px;
+}
+.more--block a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .arrow-ic--block{
     display: flex;
     align-items: center;
     width: 20px;
     height: 20px;
-    overflow: hidden;
-}
-.more--block{
-    position: relative;
-    overflow: hidden;
-}
-.more--block span{
-    display: block;
-    z-index: 10;
-    background: #fff;
-}
-.more--block a{
-    display: flex;
-    align-items: center;
-    
 }
 .more--block .more_ic {
     position: absolute;
@@ -72,6 +70,7 @@
 }
 .second-arrow{
     transform: translateX(-100%);
+    opacity: 0;
 }
 .more--block:hover .first-arrow{
     transform: translateX(100%);
@@ -79,22 +78,18 @@
 }
 .more--block:hover .second-arrow{
     transform: translateX(0%);
-
+    opacity: 1;
+}
+.notice_item .more--block{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
 }
 
-
-
-
-
-
 @media screen and (min-width:993px) {
-    .section {
-        padding: 100px 0;
-    }
+    .section { padding: 100px 0; }
 }
 
 @media screen and (max-width:992px) {
-    .section {
-        padding: 50px 50px;
-    }
+    .section { padding: 50px 50px; }
 }

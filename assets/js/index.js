@@ -2,20 +2,20 @@
 
 
 
-// 실제 페이지 로드 완료 후
-window.addEventListener('load', () => {
-    const preLoad = gsap.timeline();
+// // 실제 페이지 로드 완료 후
+// window.addEventListener('load', () => {
+//     const preLoad = gsap.timeline();
 
-    preLoad.set('.header',{yPercent : -100});
-    preLoad.set('.wrapper',{y:-80});
-    preLoad.set('.hero_section .swiper', { height: '100vh' });
+//     preLoad.set('.header',{yPercent : -100});
+//     preLoad.set('.wrapper',{y:-80});
+//     preLoad.set('.hero_section .swiper', { height: '100vh' });
 
 
-    preLoad.to('.wrapper',{y:80, duration:1});
-    preLoad.to('.hero_section .swiper', { height: "60vh", duration :2 });
-    preLoad.to('.header',{yPercent : 0});
+//     preLoad.to('.wrapper',{y:0, duration:1});
+//     preLoad.to('.hero_section .swiper', { height: "60vh", duration :2 });
+//     preLoad.to('.header',{yPercent : 0});
 
-});
+// });
 
 
 
@@ -245,8 +245,21 @@ project.to(newscontent, {
 });
 
 
+// marquee
+const marquee = document.querySelector('.marquee--block');
 
+gsap.set(marquee,{yPercent:100});
 
+const marqueeBlock = gsap.timeline({
+    scrollTrigger: {
+        trigger: document.querySelector('.footer'),
+        start: "100% 100%",
+        end: "100% 100%",
+    }
+});
+
+marqueeBlock.to(marquee,{yPercent:0})
+// marqueeBlock.to(marquee,{yPercent:0, duration :2})
 
 
 // pc

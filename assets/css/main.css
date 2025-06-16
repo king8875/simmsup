@@ -32,12 +32,12 @@
 }
 .hero_content .tx--block{
     position: absolute;
-    top: 40%;
+    top: calc(50% - 80px);
     left: 20%;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    max-width: 55%;
+    /* max-width: 55%; */
     gap: 20px;
     color: var(--primary-white);
 }
@@ -152,6 +152,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     width: 100%;
     gap: 15px;
 }
@@ -504,7 +505,7 @@
     } */
     .hero_content .tx--block{
         position: absolute;
-        top: 40%;
+        top: calc(50% - 60px);
         left: 50%;
         transform: translate(-50%, -40%);
         max-width: 55%;
@@ -561,12 +562,16 @@
     .together_section .together_content{
         flex-direction: column;
         text-align: center;
+        gap: 50px;
     }
     .together_content .tg--left{
         align-items: center;
     }
     .together_content .tg--left .tg_download--btn{
-        margin: 40px 0;
+        width: 200px;
+        height: 47px;
+        font-size: 14px;
+        margin: 20px 0;
     }
     .together_content .tg--right{
         justify-content: center;
@@ -577,10 +582,17 @@
         width: 100%;
     }
     .tg--right .tg_btn--item a .img--block{
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
     }
+    .tg--right .tg_btn--item a .img--block img {
+        width: 45%;
+        height: 45%;
+    }
+    .together_content .tg--left .tg_subtit{
+        min-width: auto;
 
+    }
 
 
     /* project */

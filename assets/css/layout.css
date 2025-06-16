@@ -405,23 +405,30 @@
         height: calc(100vh - 9.2rem);
     }
     /* footer */
+    .footer{
+        padding: 30px 0;
+    }
     .footer_content{
         padding: 15px;
-        gap: 50px;
+        gap: 40px;
     }
     .footer_content .footer_top--block{
-        gap: 50px;
+        font-size: 12px;
+        gap: 30px;
+    }
+    .footer_content .footer_top--block .footer_location div{
+        flex-direction: column;
     }
     .footer_content .footer_top--block .footer_location .footer_download--btn{
-        margin-top: 40px;
+        margin-top: 20px;
         width: max-content;
         position: relative;
-        font-size: 16px;
+        font-size: 14px;
     }
     .footer_bottom--block{
-        gap: 20px;
+        gap: 15px;
         flex-direction: column-reverse;
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
     }
 }

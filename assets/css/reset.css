@@ -48,10 +48,16 @@ body{
     letter-spacing: -0.025em;
     background: #fff;
 }
-body {
-    -ms-overflow-style: none;  /* IE & Edge */
-    scrollbar-width: none;     /* Firefox */
-  }
-body::-webkit-scrollbar {
-    display: none !important;             /* Safari & Chrome */
+
+
+@media screen and (max-width:992px) {
+    body {
+        -ms-overflow-style: none;  /* IE & Edge */
+        scrollbar-width: none;     /* Firefox */
+    }
+    body::-webkit-scrollbar {
+        display: none !important;             /* Safari & Chrome */
+        scrollbar-width: none;
+    }
+    
 }

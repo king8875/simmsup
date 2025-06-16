@@ -201,7 +201,7 @@
     }
 
     .bold_18 {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     .more--block span {

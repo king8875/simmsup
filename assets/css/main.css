@@ -224,6 +224,7 @@
 }
 .together_content .tg--left{
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     gap: 15px;
 }
@@ -233,15 +234,13 @@
 
 .together_content .tg--left .tg_download--btn{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     border: 2px solid #585656;
-    width: 265px;
-    height: 57px;
+    padding: 12px 26px;
     font-size: 20px;
     font-weight: var(--font-b);
     margin-top: 35px;
-    background: linear-gradient(to right, var(--primary-white));
     transition: all .2s ease;
 }
 .together_content .tg--left .tg_download--btn:hover{
@@ -505,9 +504,9 @@
     } */
     .hero_content .tx--block{
         position: absolute;
-        top: calc(50% - 60px);
+        top: calc(60% - 60px);
         left: 50%;
-        transform: translate(-50%, -40%);
+        transform: translate(-60%, -40%);
         width: 100%;
         max-width: 100%;
         gap: 20px;
@@ -563,15 +562,15 @@
     .together_section .together_content{
         flex-direction: column;
         text-align: center;
-        gap: 50px;
+        gap: 30px;
     }
     .together_content .tg--left{
         align-items: center;
     }
     .together_content .tg--left .tg_download--btn{
-        width: 200px;
-        height: 47px;
-        font-size: 14px;
+        /* width: 200px; */
+        /* height: 47px; */
+        font-size: 16px;
         margin: 20px 0;
     }
     .together_content .tg--right{
@@ -623,6 +622,7 @@
         position: absolute;
         top: 10px;
         left: 10px;
+        right: 10px;
     }
     .pj_content--block .pj_img_box.first .pj_img_box-tx p{
         font-weight: var(--font-sb);
@@ -656,6 +656,9 @@
     }
 
     /* notice */
+    .notice_content{
+        gap: 0px;
+    }
     .notice_content .notice_list{
         flex-direction: column;
         gap: 10px;

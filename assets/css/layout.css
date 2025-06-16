@@ -267,8 +267,8 @@
     top: 50%;
     right: -12px;
     transform: translateY(-50%);
-    width: 5px;
-    height: 5px;
+    width: 2px;
+    height: 2px;
     border-radius: 50%;
     background: #fff;
 }
@@ -287,7 +287,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 10px 15px;
+    padding: 12px 26px;
     border: 2px solid #fff;
     font-weight: var(--font-b);
     font-size: 20px;
@@ -430,5 +430,8 @@
         flex-direction: column-reverse;
         padding-top: 30px;
         padding-bottom: 0px;
+    }
+    .footer_content .footer_top--block .footer_nav--list .footer_nav--item::after{
+        right: -10px;
     }
 }

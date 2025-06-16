@@ -211,4 +211,10 @@
     .inner{
         padding: 0;
     }
+
+    .section_header--block {
+        justify-content: flex-start;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
 }

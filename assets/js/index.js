@@ -1,21 +1,32 @@
 
 
+// if ('scrollRestoration' in history) {
+//     history.scrollRestoration = 'manual';
+// }
+  
+  
+// 실제 페이지 로드 완료 후
+// gsap.set('wrapper', {overflowY:hidden});
+window.addEventListener('load', () => {
+    // window.scrollTo(0, 0);
 
+    // 스크롤 막기
+    // document.body.style.overflow = 'hidden';
+    const preLoad = gsap.timeline({
+        onComplete: () => {
+            // 애니 끝나면 스크롤 활성화
+            // document.body.style.overflow = 'auto';
+        }
+    });
 
-// // 실제 페이지 로드 완료 후
-// window.addEventListener('load', () => {
-//     const preLoad = gsap.timeline();
+    preLoad.set('.header', { yPercent: -100 });
+    preLoad.set('.wrapper', { y: -80 });
+    preLoad.set('.hero_section .swiper', { height: '100vh' });
 
-//     preLoad.set('.header',{yPercent : -100});
-//     preLoad.set('.wrapper',{y:-80});
-//     preLoad.set('.hero_section .swiper', { height: '100vh' });
-
-
-//     preLoad.to('.wrapper',{y:0, duration:1});
-//     preLoad.to('.hero_section .swiper', { height: "60vh", duration :2 });
-//     preLoad.to('.header',{yPercent : 0});
-
-// });
+    preLoad.to('.wrapper', { y: 0, duration: 0.8 });
+    preLoad.to('.hero_section .swiper', { height: "60vh", duration: 0.8 });
+    preLoad.to('.header', { yPercent: 0 });
+});
 
 
 
@@ -137,30 +148,30 @@ toggleBtn.addEventListener('click', function () {
 
 
 
-// video gsap
-gsap.set(".video_inner", { autoAlpha: 0, yPercent: 100 });
-gsap.set(".video_header", { autoAlpha: 0 });
-const video = gsap.timeline({
-    scrollTrigger: {
-        trigger: document.querySelector('.video_section'),
-        start: "50% 70%",
-        end: "100% 70%",
-    }
-});
-video.to('.video_inner', {
-    autoAlpha: 1,
-    yPercent: 0,
-    duration: 1
-});
+// // video gsap
+// gsap.set(".video_inner", { autoAlpha: 0, yPercent: 100 });
+// gsap.set(".video_header", { autoAlpha: 0 });
+// const video = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: document.querySelector('.video_section'),
+//         start: "50% 70%",
+//         end: "100% 70%",
+//     }
+// });
+// video.to('.video_inner', {
+//     autoAlpha: 1,
+//     yPercent: 0,
+//     duration: 1
+// });
 
-video.to('.video_header', {
-    autoAlpha: 1,
-    duration: 1
-});
+// video.to('.video_header', {
+//     autoAlpha: 1,
+//     duration: 1
+// });
 
 // together gsap
-gsap.set(".tg--left", { autoAlpha: 0, yPercent: 100 });
-gsap.set(".tg--right .tg_btn--item", { autoAlpha: 0, yPercent: 100 });
+gsap.set(".tg--left", { autoAlpha: 0,  y:20 });
+gsap.set(".tg--right .tg_btn--item", { autoAlpha: 0, });
 const together = gsap.timeline({
     scrollTrigger: {
         trigger: document.querySelector('.together_section'),
@@ -171,17 +182,19 @@ const together = gsap.timeline({
 });
 together.to('.tg--left', {
     autoAlpha: 1,
-    yPercent: 0,
-    duration: 1
+    y: 0,
+    duration: 0.8
 });
 together.to('.tg--right .tg_btn--item', {
     autoAlpha: 1,
-    yPercent: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    stagger: 0.2,
+    y: 0,
+    duration: 0.8,
+    ease: "power4.out",
+    stagger: 0.3,
 });
 
+// duration 1600, delay(stagger) 160, start delay 500, power4.out
+// y: -20px; opacity 0 -> y: 0 op: 1
 
 
 
@@ -204,15 +217,13 @@ const project = gsap.timeline({
 
 project.to(pjheader, {
     autoAlpha: 1,
-    duration: 1
+    duration: 0.5
 });
 project.to(pjcontent, {
     autoAlpha: 1,
     duration: 0.5,
     yPercent: 0
 });
-
-
 
 
 
@@ -235,7 +246,7 @@ const news = gsap.timeline({
 
 project.to(newsheader, {
     autoAlpha: 1,
-    duration: 1
+    duration: 0.5
 });
 project.to(newscontent, {
     autoAlpha: 1,
@@ -245,20 +256,106 @@ project.to(newscontent, {
 });
 
 
-// marquee
-const marquee = document.querySelector('.marquee--block');
 
-gsap.set(marquee,{yPercent:100});
 
-const marqueeBlock = gsap.timeline({
-    scrollTrigger: {
-        trigger: document.querySelector('.footer'),
-        start: "100% 100%",
-        end: "100% 100%",
-    }
+
+// sidemenu target js
+document.querySelectorAll('.side_bottom--left a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.dataset.target;
+        const targetEl = document.getElementById(targetId);
+
+        if (targetEl) {
+            targetEl.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
-marqueeBlock.to(marquee,{yPercent:0})
+// side menu
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.header_sidebar--btn');
+    const sideMenuInner = document.querySelector('.side_menu--inner');
+    const sideMenu = document.querySelector('#sideMenu');
+    const closeBtn = document.querySelector('.close--btn');
+    const sideOverlay = document.querySelector('.side_menu_overlay');
+    const body = document.body;
+
+    sideOverlay.addEventListener('click', function(){
+        sideMenu.classList.remove("active"); 
+        sideOverlay.classList.remove('active');
+
+    });
+
+    toggleBtn.addEventListener('click', function () {
+        sideMenu.classList.toggle('active');
+        sideOverlay.classList.toggle('active');
+
+    });
+
+    // 닫기
+    closeBtn.addEventListener("click", function () {
+        sideMenuInner.classList.remove("active");
+        sideMenu.classList.remove("active");
+        sideOverlay.classList.remove('active');
+    });
+
+   
+});
+
+
+
+const headerSearchIcon = document.querySelector('.header_mobile .search_ic--block');
+const sideMobile = document.querySelector('.side_menu--block--mobile');
+const closeBtn = document.querySelector('.side_menu--block--mobile #closeBtn');
+const body = document.body;
+const sideOverlay = document.querySelector('.side_menu_overlay');
+
+
+headerSearchIcon.addEventListener("click", function () {
+    sideMobile.classList.add('active');
+    body.classList.add('scroll-lock');
+
+});
+closeBtn.addEventListener("click", function () {
+    sideMobile.classList.remove('active');
+    body.classList.remove('scroll-lock');
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// marquee
+// const marquee = document.querySelector('.marquee--block');
+
+// gsap.set(marquee,{yPercent:100});
+
+// const marqueeBlock = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: document.querySelector('.footer'),
+//         start: "80% 100%",
+//         end: "80% 100%",
+//         scrub:1,
+//     }
+// });
+
 // marqueeBlock.to(marquee,{yPercent:0, duration :2})
 
 

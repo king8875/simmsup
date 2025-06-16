@@ -8,7 +8,8 @@
     top: 0;
     left: 0;
     z-index: 100;
-    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) -2px 3px 90px -20px !important;
+    background: var(--primary-white);
 }
 .header .header_inner{
     display: flex;
@@ -17,16 +18,16 @@
     max-width: 1200px;
     height: 80px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 var(--mobile-padding);
 
 }
-.header .header_inner .header_logo--block{ }
 .header .header_inner .header_logo--block a{
     display: block;
 }
-.header .header_inner .header_logo--block a img{}
-
-
+.header .header_inner .header_logo--block a img{
+    width: 100%;
+    height: 100%;
+}
 .header .header_inner .header_nav--block{
     display: flex;
     align-items: center;
@@ -43,14 +44,10 @@
     font-size: 18px;
     font-weight: var(--font-b);
 }
-
 .header .header_inner .header_nav--block .header_sidebar--btn{
     width: 22px;
     height: 22px;
     background: #000;
-}
-
-.header .header_inner .header_don--block{
 }
 .header .header_inner .header_don--block .don--btn{
     display: inline-block;
@@ -62,20 +59,180 @@
     font-weight: var(--font-b);
     transition: all 0.4s ease;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
- 
     background-size: 200% 100%;
     background-position: left center;
 }
 .header .header_inner .header_don--block .don--btn:hover{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     background-position: right center;
+}
 
+/* sidemenu */
+.side_menu_overlay{
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    transition: all .5s;
+    z-index: 101;
+}
+.side_menu_overlay.active{
+    display: block;
+}
+.side_menu--block{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 420px;
+    transform: translateX(100%);
+    transition: all .4s ease;
+    z-index: 102;
+}
+.side_menu--block.active{
+    transform: translateX(0%);
+}
+.side_menu--block .side_menu--inner{
+    background: #fff;
+}
+
+.side_menu--block .side_menu--inner .side_top--block{
+    padding: 50px 40px;
+    background: var(--primary-blue);
+}
+.side_top--block .close--btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    transition: all .4s ease;
+}
+.side_top--block .close--btn:hover{
+    transform: rotate(180deg);
+}
+.side_form{
+    display: flex;
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid #fff;
+}
+.side_form .search_ic--block{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: grab;
+}
+.sm-search--label{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.side_top--block .sm-search--block{
+    background: none;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: var(--font-sb);
+    color: #fff;
+    outline: none;
+    border-radius: 0;
+    margin-left: 20px;
+}
+.side_top--block .sm-search--block::placeholder{
+    color: #fff;
+}
+.side_top--block .search_keyword{
+    margin-top: 30px;
+}
+.side_top--block .search_keyword ul{
+    display: flex;
+    gap: 10px;
+    color: #fff;
+}
+.side_top--block .search_keyword ul li{
+    padding: 6px 14px;
+    border-radius: 45px;
+    border: 1px solid #f2f2f2;
+    font-size: 16px;
+    transition: all .4s ease;
+    cursor: grab;
+}
+.side_top--block .search_keyword ul li:first-child{
+    border: none;
+    font-weight: var(--font-b);
+    padding: 6px 0px;
+    margin-right: 10px;
+}
+.side_top--block .search_keyword ul li:not(:first-child):hover {
+    background: #fff;
+    color: var(--primary-blue);
+}
+.side_bottom--block{
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 13.2rem);
+}
+
+.side_bottom--block .side_bottom--right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 60px;
+    overflow-y: scroll;
+}
+.side_bottom--block .side_bottom--right ul{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    gap: 10px;
+
+}
+.side_bottom--block .side_bottom--right ul li{
+    color: #585656;
+    font-size: 16px;
+    transition: all .5s;
+}
+.side_bottom--block .side_bottom--right ul li a{
+    display: block;
+}
+.side_bottom--block .side_bottom--right ul .side_right--tit{
+    color: #000;
+    margin-bottom: 20px;
+}
+.side_bottom--block .side_bottom--right ul .side_right--tit a {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
 
 
-/* footer */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
 .footer{
     position: relative;
     background: #0d0d0d;
@@ -120,6 +277,8 @@
     display: none;
 }
 .footer_content .footer_top--block .footer_nav--list .footer_nav--item a{}
+.footer_content .footer_top--block .footer_nav--list .footer_nav--item a:hover{
+}
 .footer_content .footer_top--block .footer_location{
     display: flex;
     flex-direction: column;
@@ -134,7 +293,14 @@
     font-weight: var(--font-b);
     font-size: 20px;
     opacity: 0.4;
+    transition: all .4s ease;
     color: #fff;
+}
+.footer_content .footer_top--block .footer_location .footer_download--btn:hover{
+    background: #fff;
+    color: #000;
+    opacity: 1;
+    border: 2px solid #000;
 }
 .footer_content .footer_top--block .footer_location div{
     display: flex;
@@ -174,22 +340,36 @@
 
 
 
-
-.footer_totop--btn{
+.footer_sns_fixed--block{
     position: absolute;
-    top: -150px;
+    top: -210px;
     right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1px;
+}
+.fs_btn{
     width: 60px;
     height: 60px;
+}
+.fs_btn a{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.footer_totop--btn{
     background: var(--primary-blue);
 }
 .footer_toptop--btn .toptop_ic{}
-
-
-
+.footer_facebook--btn{ background: #3B5998; }
+.footer_instar--btn{
+    background: url(/assets/img/footer/sns/instar_bg.png);
+}
+.footer_kakao--btn{
+    background: #FFE812;
+}
 
 
 
@@ -203,6 +383,11 @@
     .header .header_inner .header_nav--block{
         margin-right: 20px;
         margin-left: auto;
+    }
+
+    /* side menu */
+    .side_menu--block{
+        width: 100%;
     }
 
 

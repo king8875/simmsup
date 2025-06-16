@@ -1,6 +1,9 @@
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 :root{
+    /* color */
+    --primary-white : #ffffff;
+    --primary-black : #000000;
     --primary-blue : #1D95D4;
     --primary-green : #2BA449;
     --primary-yellow : #E99A21;
@@ -10,7 +13,10 @@
     --font-sb : 600;
     --font-m : 500;
 
+    --odd-bg : #f7f7f7;
     --fc-subtit : #585656;
+
+    --mobile-padding : 15px;
 }
 
 

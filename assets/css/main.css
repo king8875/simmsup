@@ -218,6 +218,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 140px;
 }
 .together_content .tg--left{
     display: flex;
@@ -254,7 +255,8 @@
 .together_content .tg--right .tg_btn--list{
     display: flex;
     align-items: center;
-    gap: 100px;
+    justify-content: space-between;
+    width: 100%;
 }
 .together_content .tg--right .tg_btn--item{}
 .together_content .tg--right .tg_btn--item a{

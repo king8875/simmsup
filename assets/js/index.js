@@ -10,9 +10,14 @@ window.addEventListener('load', () => {
     preLoad.set('.header', { yPercent: -100 });
     preLoad.set('.wrapper', { y: -80 });
     preLoad.set('.hero_section .swiper', { height: '100vh' });
+    preLoad.set('.hero_swiper_control', {autoAlpha:0});
+    preLoad.set('.hero_swiper_btn--group',{autoAlpha:0});
 
     preLoad.to('.wrapper', { y: 0, duration: 0.8 });
     preLoad.to('.hero_section .swiper', { height: "60vh", duration: 0.8 });
+    preLoad.to('.hero_swiper_control', {autoAlpha:1});
+    preLoad.to('.hero_swiper_btn--group',{autoAlpha:1});
+
     preLoad.to('.header', { yPercent: 0 });
 });
 

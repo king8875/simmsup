@@ -495,18 +495,11 @@
     .hero_section .swiper{
         height: 60vh;
     }
-    /* .hero_content .tx--block{
-        position: absolute;
-        top: 50%;
-        left: 30%;
-        transform: translate(-50%, -50%);
-        min-width: 100%;
-    } */
     .hero_content .tx--block{
         position: absolute;
         top: calc(60% - 60px);
         left: 50%;
-        transform: translate(-60%, -40%);
+        transform: translate(-50%, -50%);
         width: 100%;
         max-width: 100%;
         gap: 20px;

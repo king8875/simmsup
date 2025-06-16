@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
     preLoad.set('.hero_swiper_btn--group',{autoAlpha:0});
 
     preLoad.to('.wrapper', { y: 0, duration: 0.8 });
-    preLoad.to('.hero_section .swiper', { height: "60vh", duration: 0.8 });
+    preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.6 });
     preLoad.to('.hero_swiper_control', {autoAlpha:1});
     preLoad.to('.hero_swiper_btn--group',{autoAlpha:1});
 
@@ -72,7 +72,7 @@ const mainswiper = new Swiper('.hero_section .swiper', {
     speed: 2000,
     effect: "fade",
     autoplay: {
-        delay: 5000,
+        delay: 4000,
         disableOnInteraction: false
     },
     pagination: {

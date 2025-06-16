@@ -37,11 +37,21 @@ fieldset,input{border: 0;}
 img, picture, video, canvas, svg {display: block;max-width:100%;object-fit: cover;}
 section{ position: relative; }
 
-
+html, body{
+    width: 100%;
+    height: 100%;
+}
 body{
     position: relative;
     word-break: keep-all;
     font-family: "Pretendard", sans-serif !important;
     letter-spacing: -0.025em;
     background: #fff;
+}
+body {
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+body::-webkit-scrollbar {
+    display: none !important;             /* Safari & Chrome */
 }

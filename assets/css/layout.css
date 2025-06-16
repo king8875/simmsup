@@ -377,6 +377,13 @@
 }
 
 @media screen and (max-width:992px) {
+    .header .header_inner{
+        height: 60px;
+    }
+    .header .header_inner .header_logo--block a{
+        display: block;
+        width: 80%;
+    }
     .header .header_inner .header_nav--block .header_nav--list{
         display: none;
     }

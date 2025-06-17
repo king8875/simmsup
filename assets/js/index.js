@@ -3,23 +3,23 @@
 
 
 // 실제 페이지 로드 완료 후
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
 
-    const preLoad = gsap.timeline({});
+//     const preLoad = gsap.timeline({});
 
-    preLoad.set('.header', { yPercent: -100 });
-    preLoad.set('.wrapper', { y: -80 });
-    preLoad.set('.hero_section .swiper', { height: '100vh' });
-    preLoad.set('.hero_swiper_control', { autoAlpha: 0 });
-    preLoad.set('.hero_swiper_btn--group', { autoAlpha: 0 });
+//     preLoad.set('.header', { yPercent: -100 });
+//     preLoad.set('.wrapper', { y: -80 });
+//     preLoad.set('.hero_section .swiper', { height: '100vh' });
+//     preLoad.set('.hero_swiper_control', { autoAlpha: 0 });
+//     preLoad.set('.hero_swiper_btn--group', { autoAlpha: 0 });
 
-    preLoad.to('.wrapper', { y: 0, duration: 0.8 });
-    preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.6 });
-    preLoad.to('.hero_swiper_control', { autoAlpha: 1 });
-    preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 });
+//     preLoad.to('.wrapper', { y: 0, duration: 0.8 });
+//     preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.6 });
+//     preLoad.to('.hero_swiper_control', { autoAlpha: 1 });
+//     preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 });
 
-    preLoad.to('.header', { yPercent: 0 });
-});
+//     preLoad.to('.header', { yPercent: 0 });
+// });
 
 
 // header js
@@ -42,6 +42,8 @@ window.addEventListener('scroll', () => {
     }
     lastScrollY = currentScrollY;
 });
+
+
 
 // loading
 window.addEventListener('load', () => {
@@ -95,16 +97,14 @@ const mainswiper = new Swiper('.hero_section .swiper', {
             if (imgBlock) {
                 imgBlock.classList.add('scale-up');
             }
-            if (textBlock) {
-                gsap.fromTo(textBlock,
-                    { opacity: 0.5, yPercent: 100, duration: 0.5 },
-                    { opacity: 1, yPercent: 0, duration: 1 }
-                )
-            }
+            // if (textBlock) {
+            //     gsap.fromTo(textBlock,
+            //         { opacity: 0.5, yPercent: 100, duration: 0.5 },
+            //         { opacity: 1, yPercent: 0, duration: 1 }
+            //     )
+            // }
         },
-        // slideChangeTransitionEnd: function () {
-        //     imgBlock.classList.remove('scale-up');
-        // },
+       
     }
 });
 
@@ -130,6 +130,8 @@ toggleBtn.addEventListener('click', function () {
     }
     isPlaying = !isPlaying;
 });
+
+
 
 
 // together gsap
@@ -329,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const newsboxImg = newsbox.querySelector('.img--block');
 
         newsbox.addEventListener('mouseenter',function(){
-            newsboxImg?.classList.add('lo-hover');
+            newsboxImg.classList.add('lo-hover');
             newsboxImg.classList.add('lo-shadow');
         });
 
@@ -339,7 +341,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
+    const headerNavItem = document.querySelectorAll('.header_nav--list .header_nav--item');
+    const headerSubNav = document.querySelectorAll('.header_subnav--list');
+    
+    headerNavItem.forEach((item, index) => {
+        item.addEventListener('mouseenter', () => {
+            headerSubNav.forEach((sub, subIndex) => {
+                if (subIndex === index) {
+                    sub.classList.add('active');
+                } else {
+                    sub.classList.remove('active');
+                }
+            });
+        });
+    
+        item.addEventListener('mouseleave', () => {
+            // 선택적으로 닫을 수 있음 (만약 유지하고 싶으면 이 부분 생략)
+            headerSubNav[index].classList.remove('active');
+        });
+    });
+    
+    
+    
 
 
 });

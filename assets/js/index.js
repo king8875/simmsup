@@ -2,24 +2,26 @@
 
 
 
+
+
 // 실제 페이지 로드 완료 후
-// window.addEventListener('load', () => {
+window.addEventListener('load', () => {
 
-//     const preLoad = gsap.timeline({});
+    const preLoad = gsap.timeline({});
 
-//     preLoad.set('.header', { yPercent: -100 });
-//     preLoad.set('.wrapper', { y: -80 });
-//     preLoad.set('.hero_section .swiper', { height: '100vh' });
-//     preLoad.set('.hero_swiper_control', { autoAlpha: 0 });
-//     preLoad.set('.hero_swiper_btn--group', { autoAlpha: 0 });
+    preLoad.set('.header', { yPercent: -100 });
+    preLoad.set('.wrapper', { y: -80 });
+    preLoad.set('.hero_section .swiper', { height: '100vh' });
+    preLoad.set('.hero_swiper_control', { autoAlpha: 0 });
+    preLoad.set('.hero_swiper_btn--group', { autoAlpha: 0 });
 
-//     preLoad.to('.wrapper', { y: 0, duration: 0.8 });
-//     preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.6 });
-//     preLoad.to('.hero_swiper_control', { autoAlpha: 1 });
-//     preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 });
+    preLoad.to('.wrapper', { y: 0, duration: 0.8 });
+    preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.6 });
+    preLoad.to('.hero_swiper_control', { autoAlpha: 1 });
+    preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 });
 
-//     preLoad.to('.header', { yPercent: 0 });
-// });
+    preLoad.to('.header', { yPercent: 0 });
+});
 
 
 // header js
@@ -104,7 +106,7 @@ const mainswiper = new Swiper('.hero_section .swiper', {
             //     )
             // }
         },
-       
+
     }
 });
 
@@ -330,20 +332,22 @@ document.addEventListener("DOMContentLoaded", () => {
     newsboxLink.forEach(newsbox => {
         const newsboxImg = newsbox.querySelector('.img--block');
 
-        newsbox.addEventListener('mouseenter',function(){
+        newsbox.addEventListener('mouseenter', function () {
             newsboxImg.classList.add('lo-hover');
             newsboxImg.classList.add('lo-shadow');
         });
 
-        newsbox.addEventListener('mouseleave',function(){
+        newsbox.addEventListener('mouseleave', function () {
             newsboxImg.classList.remove('lo-hover');
             newsboxImg.classList.remove('lo-shadow');
         });
     });
 
+
+    const headerNav = document.querySelector('.header_nav--list');
     const headerNavItem = document.querySelectorAll('.header_nav--list .header_nav--item');
-    const headerSubNav = document.querySelectorAll('.header_subnav--list');
-    
+    const headerSubNav = document.querySelectorAll('.header_subnav--block');
+
     headerNavItem.forEach((item, index) => {
         item.addEventListener('mouseenter', () => {
             headerSubNav.forEach((sub, subIndex) => {
@@ -354,18 +358,39 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
-    
+
         item.addEventListener('mouseleave', () => {
-            // 선택적으로 닫을 수 있음 (만약 유지하고 싶으면 이 부분 생략)
             headerSubNav[index].classList.remove('active');
         });
     });
-    
-    
-    
+
+
+
+    headerNavItem.forEach((item, index) => {
+        item.addEventListener('mouseenter', () => {
+            headerNavItem.forEach((nav, i) => {
+                if (i !== index) {
+                    nav.classList.add('dimmed');
+                } else {
+                    nav.classList.remove('dimmed');
+                }
+            });
+        });
+    });
+
+    // 마우스가 전체 nav에서 벗어났을 때 모두 원래대로
+    headerNav.addEventListener('mouseleave', () => {
+        headerNavItem.forEach(nav => nav.classList.remove('dimmed'));
+    });
+
+
+
 
 
 });
+
+
+
 
 
 

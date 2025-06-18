@@ -2,32 +2,10 @@
 
 
 
-
-
-// 실제 페이지 로드 완료 후
-window.addEventListener('load', () => {
-
-    const preLoad = gsap.timeline({});
-
-    preLoad.set('.header', { yPercent: -100 });
-    preLoad.set('.wrapper', { y: -80 });
-    preLoad.set('.hero_section .swiper', { height: '100vh' });
-    preLoad.set('.hero_swiper_control', { autoAlpha: 0 });
-    preLoad.set('.hero_swiper_btn--group', { autoAlpha: 0 });
-
-    preLoad.to('.wrapper', { y: 0, duration: 0.8 });
-    preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.6 });
-    preLoad.to('.hero_swiper_control', { autoAlpha: 1 });
-    preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 });
-
-    preLoad.to('.header', { yPercent: 0 });
-});
-
-
-// header js
+// header js -- common
 let lastScrollY = window.scrollY;
 const header = document.querySelector('.header');
-const heroSection = document.querySelector('.hero_section');
+const heroSection = document.querySelector('.lo-first-section');
 
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
@@ -46,8 +24,7 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-// loading
+// loading -- common
 window.addEventListener('load', () => {
     const overlay = document.getElementById('loading-overlay');
     overlay.classList.add('hidden');
@@ -57,7 +34,7 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
-// to top button
+// to top button -- common
 document.querySelector("#GoToTop").addEventListener("click", function () {
     gsap.to(window, {
         scrollTo: 0,
@@ -66,49 +43,7 @@ document.querySelector("#GoToTop").addEventListener("click", function () {
     });
 });
 
-// hero swiper
-const slides = document.querySelectorAll('.hero_content .img--block');
-const activeSlide = document.querySelector('.hero_content .swiper-slide-active .img--block');
 
-const mainswiper = new Swiper('.hero_section .swiper', {
-    slidesPerView: 1,
-    loop: true,
-    speed: 2000,
-    effect: "fade",
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    navigation: {
-        nextEl: '.hero_section .swiper-button-next',
-        prevEl: '.hero_section .swiper-button-prev',
-    },
-    on: {
-        slideChangeTransitionStart: function () {
-            const allImgBlocks = document.querySelectorAll('.hero_content .img--block');
-            allImgBlocks.forEach(block => block.classList.remove('scale-up'));
-
-            const activeSlide = this.slides[this.activeIndex];
-            const imgBlock = activeSlide.querySelector('.img--block');
-            const textBlock = activeSlide.querySelector('.tx--block');
-
-            if (imgBlock) {
-                imgBlock.classList.add('scale-up');
-            }
-            // if (textBlock) {
-            //     gsap.fromTo(textBlock,
-            //         { opacity: 0.5, yPercent: 100, duration: 0.5 },
-            //         { opacity: 1, yPercent: 0, duration: 1 }
-            //     )
-            // }
-        },
-
-    }
-});
 
 const toggleBtn = document.querySelector('.autoplay--btn');
 const playIcon = toggleBtn.querySelector('.play_ic--block');
@@ -136,88 +71,6 @@ toggleBtn.addEventListener('click', function () {
 
 
 
-// together gsap
-gsap.set(".tg--left", { autoAlpha: 0, y: 50 });
-gsap.set(".tg--right .tg_btn--item", { autoAlpha: 0, });
-const together = gsap.timeline({
-    scrollTrigger: {
-        trigger: document.querySelector('.together_section'),
-        start: "0% 70%",
-        end: "0% 70%",
-    }
-});
-together.to('.tg--left', {
-    autoAlpha: 1,
-    y: 0,
-    duration: 0.8
-});
-together.to('.tg--right .tg_btn--item', {
-    autoAlpha: 1,
-    y: 0,
-    duration: 0.8,
-    ease: "power4.out",
-    stagger: 0.3,
-});
-
-
-// project
-const pjheader = document.querySelector('.project_section .section_header--block');
-const pjcontent = document.querySelector('.project_section .pj_content--block');
-
-gsap.set(pjheader, { autoAlpha: 0 });
-gsap.set(pjcontent, {
-    autoAlpha: 0,
-    yPercent: 10
-});
-const project = gsap.timeline({
-    scrollTrigger: {
-        trigger: document.querySelector('.project_section'),
-        start: "0% 70%",
-        end: "100% 70%",
-    }
-});
-
-project.to(pjheader, {
-    autoAlpha: 1,
-    duration: 0.5
-});
-project.to(pjcontent, {
-    autoAlpha: 1,
-    duration: 0.5,
-    yPercent: 0
-});
-
-
-// news
-const newsheader = document.querySelector('.news_section .section_header--block');
-const newscontent = document.querySelectorAll('.news_section .news_item');
-
-gsap.set(newsheader, { autoAlpha: 0 });
-gsap.set(newscontent, {
-    autoAlpha: 0,
-    yPercent: 20
-});
-const news = gsap.timeline({
-    scrollTrigger: {
-        trigger: document.querySelector('.news_content'),
-        start: "0% 80%",
-        end: "100% 80%",
-    }
-});
-
-project.to(newsheader, {
-    autoAlpha: 1,
-    duration: 0.5
-});
-project.to(newscontent, {
-    autoAlpha: 1,
-    duration: 0.5,
-    yPercent: 0,
-    stagger: 0.3
-});
-
-
-
 
 // sidemenu target js
 // document.querySelectorAll('.side_bottom--left a').forEach(link => {
@@ -235,7 +88,7 @@ project.to(newscontent, {
 //     });
 // });
 
-// side menu js
+// side menu js -- common
 document.addEventListener('DOMContentLoaded', function () {
     const toggleBtn = document.querySelector('.header_sidebar--btn');
     const sideMenuInner = document.querySelector('.side_menu--inner');
@@ -268,81 +121,7 @@ const closeBtn = document.querySelector('.side_menu--block--mobile #closeBtn');
 const body = document.body;
 const sideOverlay = document.querySelector('.side_menu_overlay');
 
-// headerSearchIcon.addEventListener("click", function () {
-//     sideMobile.classList.add('active');
-//     body.classList.add('scroll-lock');
-
-// });
-// closeBtn.addEventListener("click", function () {
-//     sideMobile.classList.remove('active');
-//     body.classList.remove('scroll-lock');
-// });
-
-
-// marquee
-// const marquee = document.querySelector('.marquee--block');
-
-// gsap.set(marquee,{yPercent:100});
-
-// const marqueeBlock = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: document.querySelector('.footer'),
-//         start: "80% 100%",
-//         end: "80% 100%",
-//         scrub:1,
-//     }
-// });
-
-// marqueeBlock.to(marquee,{yPercent:0, duration :2})
-
-
-
-
-
-
-
-
-
-
-// const pjbox = document.querySelector('.pj_img_box a');
-
-// pjbox.addEventListener('mouseenter', function(){
-//     pjbox.classList.add('lo-hover');
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
-    const pjcontentbox = document.querySelectorAll('.pj_img_box');
-
-
-    pjcontentbox.forEach(pjbox => {
-        pjbox.addEventListener('mouseenter', () => {
-            pjbox.classList.add('lo-hover');
-            pjbox.classList.add('lo-shadow');
-        });
-
-        pjbox.addEventListener('mouseleave', () => {
-            pjbox.classList.remove('lo-hover');
-            pjbox.classList.remove('lo-shadow');
-
-        });
-    });
-
-    const newsboxLink = document.querySelectorAll('.news_content .news_item a');
-
-    newsboxLink.forEach(newsbox => {
-        const newsboxImg = newsbox.querySelector('.img--block');
-
-        newsbox.addEventListener('mouseenter', function () {
-            newsboxImg.classList.add('lo-hover');
-            newsboxImg.classList.add('lo-shadow');
-        });
-
-        newsbox.addEventListener('mouseleave', function () {
-            newsboxImg.classList.remove('lo-hover');
-            newsboxImg.classList.remove('lo-shadow');
-        });
-    });
-
 
     const headerNav = document.querySelector('.header_nav--list');
     const headerNavItem = document.querySelectorAll('.header_nav--list .header_nav--item');
@@ -382,12 +161,44 @@ document.addEventListener("DOMContentLoaded", () => {
     headerNav.addEventListener('mouseleave', () => {
         headerNavItem.forEach(nav => nav.classList.remove('dimmed'));
     });
-
-
-
-
-
 });
+// headerSearchIcon.addEventListener("click", function () {
+//     sideMobile.classList.add('active');
+//     body.classList.add('scroll-lock');
+
+// });
+// closeBtn.addEventListener("click", function () {
+//     sideMobile.classList.remove('active');
+//     body.classList.remove('scroll-lock');
+// });
+
+
+// marquee
+// const marquee = document.querySelector('.marquee--block');
+
+// gsap.set(marquee,{yPercent:100});
+
+// const marqueeBlock = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: document.querySelector('.footer'),
+//         start: "80% 100%",
+//         end: "80% 100%",
+//         scrub:1,
+//     }
+// });
+
+// marqueeBlock.to(marquee,{yPercent:0, duration :2})
+
+
+
+
+// const pjbox = document.querySelector('.pj_img_box a');
+
+// pjbox.addEventListener('mouseenter', function(){
+//     pjbox.classList.add('lo-hover');
+// });
+
+
 
 
 

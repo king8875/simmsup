@@ -559,10 +559,39 @@
     height: 18px;
     transform: translateY(-50%);
     background: url("/assets/img/main/logo/triangle-right_ic.svg") 50% 50% no-repeat;
-
 }
 .sp_breadcrump .sp_breadcrump--list li a{}
+.sp_header--banner{
+    position: relative;
+}
+.sp_header--banner .img--block{
+    filter: brightness(0.7);
+    height: 200px;
+}
+.sp_header--banner .img--block img{
+    object-position: center 88%;
+    width: 100%;
+    height: 100%;
+}
+.sp_header--banner .text--block{
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sp_header--banner .text--block strong{
+    font-size: 24px;
+    line-height: 1.4;
+    color: #fff;
+}
+.sp_header--banner .text--block p{
 
+    font-size: 16px;
+    color: #ddd;
+}
 
 
 
@@ -631,14 +660,6 @@
     justify-content: center;
     margin-left: 10px;
     margin-bottom: 18px;
-    /* position: absolute;
-    top: -4px;
-    left: 130px;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 .abswiper_section .swiper-pagination{
     position: relative;
@@ -712,7 +733,24 @@
 
 
 
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
+/* SUPPORT PAGE CSS */
+
+.support_section{
+    padding: 100px 0;
+}
+.support_section .support_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px 60px; /* row-gap, column-gap */
+}
+.support_section .support_list .support_item{}
+.support_section .support_list .support_item a{}
+.support_section .support_list .support_item a img{
+    width: 100%;
+    height: 100%;
+}
 
 
 

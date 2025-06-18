@@ -311,7 +311,7 @@ strong {
     }
 
     .inner {
-        padding: 0;
+        padding: 0 15px;
 
     }
     .about_wrapper .inner{

@@ -48,6 +48,8 @@ body{
     font-family: "Pretendard", sans-serif !important;
     letter-spacing: -0.025em;
     background: #fff;
+    overflow-x: hidden;
+
 }
 
 .side_bottom--block .side_bottom--right::-webkit-scrollbar {
@@ -60,7 +62,7 @@ body{
     }
     body::-webkit-scrollbar {
         display: none !important;             /* Safari & Chrome */
-        scrollbar-width: none;
+        scrollbar-width: none !important;
     }
     
 }

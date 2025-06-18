@@ -271,7 +271,8 @@
                         <div class="caf-subtit">
                             <strong>(사)섬즈업은 CAF International로부터 인증을 받아 Global Charity Database에 추가된 비영리단체 입니다.</strong>
                             <span>
-                                조직의 거버넌스 구조, 등록 상태, 연간 재무제표, 구성원 등 조직의 주요 운영 요소에 대한 철저한 검토를 통해 등록이 이루어지며,<br />
+                                조직의 거버넌스 구조, 등록 상태, 연간 재무제표, 구성원 등 조직의 주요 운영 요소에 대한 철저한 검토를 통해 등록이 이루어지며,
+                                <br class="d-none d-md-block">
                                 이는 단체의 모든 기금이 자선적으로 사용됨을 확인하는 역할을 합니다.
                             </span>
                         </div>
@@ -405,10 +406,84 @@
         </div>
     </footer>
 
-
-
-
     <script>
+        // 실제 페이지 로드 완료 후
+        window.addEventListener('load', () => {
+
+            const preLoad = gsap.timeline({});
+
+            preLoad.set('.sp_header--tit h2',{y:50});
+            preLoad.set('.abswiper_content',{ autoAlpha:0 });
+            preLoad.set('.abswiper--left-text p',{
+                autoAlpha:0,
+            });
+
+
+            preLoad.to('.sp_header--tit h2',{
+                y:0,
+                duration:0.7
+            });
+            preLoad.to('.abswiper_content',{
+                autoAlpha:1,
+                duration:0.5
+            });
+            preLoad.to('.abswiper--left-text p',{
+                autoAlpha:1,
+                duration:0.5
+            });
+        });
+
+        
+
+
+
+        /* ab_img--area */
+        gsap.set('.ab_img--area .img--block',{ autoAlpha:0 });
+        const abImgArea = gsap.timeline({
+            scrollTrigger: {
+                trigger: document.querySelector('.ab_img--area'),
+                start: "40% 80%",
+                end: "40% 80%",
+            }
+        });
+        
+        abImgArea.to('.ab_img--area .img--block',{
+            autoAlpha:1,
+            duration:1
+        });
+    
+
+        // ab_caf--content
+        gsap.set('.caf-tit',{ autoAlpha:0, y:30 });
+        gsap.set('.ab_caf--area .ab_caf--content .img--block',{ autoAlpha:0 });
+        gsap.set('.caf-subtit',{ autoAlpha:0, yPercent:50 });
+        const abCafArea = gsap.timeline({
+            scrollTrigger: {
+                trigger: document.querySelector('.ab_caf--area'),
+                start: "40% 80%",
+                end: "40% 80%",
+            }
+        });
+        
+        abCafArea.to('.caf-tit',{
+            autoAlpha:1,
+            duration:0.5,
+            y:0
+        });
+        abCafArea.to('.ab_caf--area .ab_caf--content .img--block',{
+            autoAlpha:1,
+            duration:0.5,
+        },"<+0.2");
+        abCafArea.to('.caf-subtit',{
+            autoAlpha:1,
+            duration:0.5,
+            yPercent:0
+        },"<+0.2");
+    
+
+
+
+
         // about swiper js
         const aboutSwiper = new Swiper('.abswiper_section .swiper', {
 

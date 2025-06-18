@@ -191,8 +191,10 @@
                             <img src="assets/img/main/supporter/banner_img.jpg" alt="">
                         </div>
                         <div class="text--block">
-                            <strong class="b600">섬의 자연을 지키는 일, 혼자서는 해낼 수 없습니다.</strong>
-                            <p class="b500">함께 걷는 후원사와 협력단체 덕분에 섬즈업의 발걸음은 더 단단해집니다.</p>
+                            <span><strong class="b600">섬의 자연을 지키는 일, 혼자서는 해낼 수 없습니다.</strong></span>
+                            <span>
+                                <p class="b500">함께 걷는 후원사와 협력단체 덕분에 섬즈업의 발걸음은 더 단단해집니다.</p>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -398,6 +400,22 @@
 
 
     <script>
+        // 실제 페이지 로드 완료 후
+        window.addEventListener('load', () => {
+
+            gsap.set('.sp_header--tit h2', { y: 50 });
+            gsap.set('.sp_header--banner .text--block strong', {y:50});
+            gsap.set('.sp_header--banner .text--block p', {y:50});
+            gsap.set('.support_item',{autoAlpha:0, y:20});
+            const preLoad = gsap.timeline({});
+
+            preLoad.to('.sp_header--tit h2', { y: 0, duration: 0.7 });
+            preLoad.to('.sp_header--banner .text--block strong', { y:0 });
+            preLoad.to('.sp_header--banner .text--block p', { y:0 },"<+0.1");
+            preLoad.to('.support_item',{autoAlpha:1, stagger:0.1, y:0},"<");
+
+        });
+
 
     </script>
 

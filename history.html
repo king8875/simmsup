@@ -203,7 +203,7 @@
                 <div class="inner">
                     <div class="ht_info--content">
                         <div class="ht_info--tx">
-                            <strong class="b600">사단법인 섬즈업</strong>
+                            <span class="over-h"><strong class="b600">사단법인 섬즈업</strong></span>
                             <p>
                                 <span>
                                     섬을 사랑하는 마음으로 2016년,<br class="d-none d-md-block">
@@ -554,6 +554,34 @@
 
 
     <script>
+
+
+
+
+
+
+
+        // 실제 페이지 로드 완료 후
+        window.addEventListener('load', () => {
+
+            gsap.set('.sp_header--tit h2', { y: 50 });
+            gsap.set('.ht_info--tx strong', { y: 50 });
+            gsap.set('.ht_info--content .ht_info--tx p', { autoAlpha: 0 });
+            const preLoad = gsap.timeline({});
+
+            preLoad.to('.sp_header--tit h2', { y: 0, duration: 0.7 });
+            preLoad.to('.ht_info--tx strong', { y: 0 }, "<+0.2");
+            preLoad.to('.ht_info--content .ht_info--tx p', { autoAlpha: 1 }, "<+0.2");
+        });
+
+
+
+
+
+
+
+
+
         // mainprojects gsap
         const projects = gsap.to('.projects-list', {
             scrollTrigger: {
@@ -570,23 +598,6 @@
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
         const tabWrapper = document.querySelector('.ht_tab--content');
-
-        // tabButtons.forEach((btn, index) => {
-        //     btn.addEventListener('click', () => {
-        //         // 버튼 클래스 관리
-        //         tabButtons.forEach(b => {
-        //             b.classList.remove('active');
-        //             b.setAttribute('aria-selected', 'false');
-        //         });
-        //         btn.classList.add('active');
-        //         btn.setAttribute('aria-selected', 'true');
-
-        //         // 콘텐츠 클래스 관리
-        //         tabContents.forEach(content => content.classList.remove('active'));
-        //         tabContents[index].classList.add('active');
-        //     });
-        // });
-
 
         function updateHeight() {
             const activeContent = document.querySelector('.tab-content.active');
@@ -617,6 +628,20 @@
             });
         });
 
+
+        // httab gsap
+        gsap.set('.ht_title',{autoAlpha:0});
+        gsap.set('.ht_tab--section .ht_tab--content',{autoAlpha:0});
+        const tabGsap = gsap.timeline({
+            scrollTrigger: {
+                trigger: document.querySelector('.ht_tab--section'),
+                start: "0% 70%",
+                end: "0% 70%",
+            }
+        });
+
+        tabGsap.to('.ht_title',{autoAlpha:1});
+        tabGsap.to('.ht_tab--section .ht_tab--content',{autoAlpha:1});
 
 
     </script>

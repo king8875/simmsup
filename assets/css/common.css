@@ -208,7 +208,9 @@ strong {
     display: table !important;
 }
 
-
+.over-h{
+    overflow: hidden;
+}
 
 
 

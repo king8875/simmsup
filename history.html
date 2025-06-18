@@ -339,7 +339,7 @@
             <section class="ht_tab--section">
                 <div class="inner">
 
-                    <strong class="ht_title b600">섬즈업의 다양한 활동</strong>
+                    <span class="over-h"><strong class="ht_title b600">섬즈업의 다양한 활동</strong></span>
 
                     <div class="ht_tab--content">
                         <div class="tab-container">
@@ -350,34 +350,32 @@
                                     id="tab-btn-2">2023년</button>
                             </div>
 
-                            <div class="tab-contents">
-                                <div class="tab-content active" id="tab1" role="tabpanel" aria-labelledby="tab-btn-1">
-                                    <ul class="tab--list">
-                                        <li>한국해양수산개발원 해양시민포럼 참여</li>
-                                        <li>KT&G-오션 해양생태계보호프로젝트 참여</li>
-                                        <li>한국해양재단 바다지기 및 바다꾸러기 연합 워크숍</li>
-                                        <li>여수시 해양쓰레기 관리 개선과 어촌의 지속 가능한 발전 방안 정책토론회 참여</li>
-                                        <li>비오템-오션 바다환경보호 워터러버캠페인 참여</li>
-                                        <li>개야도 특성화사업 현장관리단 운영 자문</li>
-                                        <li>한국해양재단 바다지기 사업 수행</li>
-                                        <li>자원봉사진흥위원회 2024자원봉사진흥계획 심의</li>
-                                        <li>JYP-오션 러브어스챌린지 프로젝트 참여</li>
-                                        <li>전라남도 섬발전종합계획 수립 연구용역 최종보고회 참여</li>
-                                        <li>한국해양수산개발원 제3차 해양쓰레기_젊은 연구자를 위한 ‘해쓰단당’세미나 발제</li>
-                                        <li>한국도시행정학회 2024 상반기 학술대회_섬 순례길 데이터베이스 토론</li>
-                                    </ul>
-                                </div>
-                                <div class="tab-content" id="tab2" role="tabpanel" aria-labelledby="tab-btn-2">
-                                    <ul class="tab--list">
-                                        <li>한국해양수산개발원 해양시민포럼fewfwefewf 참여</li>
-                                        <li>KT&G-오션 해양생태계보호프로젝트 참여</li>
-                                        <li>한국해양재단 바다지기 및 바다꾸러기 연합 워크숍</li>
-                                        <li>여수시 해양쓰레기 관리 개선과 어촌의 지속 가능한 발전 방안 정책토론회 참여</li>
-                                        <li>비오템-오션 바다환경보호 워터러버캠페인 참여</li>
-                                    </ul>
-                                </div>
-
+                            <div class="tab-content active" id="tab1" role="tabpanel" aria-labelledby="tab-btn-1">
+                                <ul class="tab--list">
+                                    <li>한국해양수산개발원 해양시민포럼 참여</li>
+                                    <li>KT&G-오션 해양생태계보호프로젝트 참여</li>
+                                    <li>한국해양재단 바다지기 및 바다꾸러기 연합 워크숍</li>
+                                    <li>여수시 해양쓰레기 관리 개선과 어촌의 지속 가능한 발전 방안 정책토론회 참여</li>
+                                    <li>비오템-오션 바다환경보호 워터러버캠페인 참여</li>
+                                    <li>개야도 특성화사업 현장관리단 운영 자문</li>
+                                    <li>한국해양재단 바다지기 사업 수행</li>
+                                    <li>자원봉사진흥위원회 2024자원봉사진흥계획 심의</li>
+                                    <li>JYP-오션 러브어스챌린지 프로젝트 참여</li>
+                                    <li>전라남도 섬발전종합계획 수립 연구용역 최종보고회 참여</li>
+                                    <li>한국해양수산개발원 제3차 해양쓰레기_젊은 연구자를 위한 ‘해쓰단당’세미나 발제</li>
+                                    <li>한국도시행정학회 2024 상반기 학술대회_섬 순례길 데이터베이스 토론</li>
+                                </ul>
                             </div>
+                            <div class="tab-content" id="tab2" role="tabpanel" aria-labelledby="tab-btn-2">
+                                <ul class="tab--list">
+                                    <li>한국해양수산개발원 해양시민포럼fewfwefewf 참여</li>
+                                    <li>KT&G-오션 해양생태계보호프로젝트 참여</li>
+                                    <li>한국해양재단 바다지기 및 바다꾸러기 연합 워크숍</li>
+                                    <li>여수시 해양쓰레기 관리 개선과 어촌의 지속 가능한 발전 방안 정책토론회 참여</li>
+                                    <li>비오템-오션 바다환경보호 워터러버캠페인 참여</li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -567,22 +565,28 @@
             gsap.set('.sp_header--tit h2', { y: 50 });
             gsap.set('.ht_info--tx strong', { y: 50 });
             gsap.set('.ht_info--content .ht_info--tx p', { autoAlpha: 0 });
+            gsap.set('.ht_info--content .ht_info--img img',{autoAlpha:0, y:50});
             const preLoad = gsap.timeline({});
 
             preLoad.to('.sp_header--tit h2', { y: 0, duration: 0.7 });
             preLoad.to('.ht_info--tx strong', { y: 0 }, "<+0.2");
             preLoad.to('.ht_info--content .ht_info--tx p', { autoAlpha: 1 }, "<+0.2");
+            preLoad.to('.ht_info--content .ht_info--img img',{autoAlpha:1, y:0},"<");
         });
 
+        // projectIntro gsap
+        gsap.set('.project-img-block img', { width: '65%' });
+        const projectIntro = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.projects-inner',
+                start: '0% 80%',
+                end: '0% 80%',
+                scrub: 1,
+            }
+        });
+        projectIntro.to('.project-img-block img', { width: '100%', });
 
 
-
-
-
-
-
-
-        // mainprojects gsap
         const projects = gsap.to('.projects-list', {
             scrollTrigger: {
                 trigger: '.projects-sec',
@@ -595,6 +599,30 @@
             x: function () { return (window.innerWidth - 10); }
         });
 
+        // active gsap
+        gsap.set('.ht_active--item', { autoAlpha: 0, y: 20 });
+
+        const activeGsap = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.ht_active--section',
+                start: "top 70%",
+                end: "top 70%",
+                invalidateOnRefresh: true
+            }
+        });
+
+        activeGsap.to('.ht_active--item', {
+            autoAlpha: 1,
+            stagger: 0.3,
+            y: 0,
+            ease: "power2.out"
+        });
+
+        window.addEventListener('load', () => {
+            ScrollTrigger.refresh();
+        });
+
+        // tab js
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
         const tabWrapper = document.querySelector('.ht_tab--content');
@@ -602,16 +630,17 @@
         function updateHeight() {
             const activeContent = document.querySelector('.tab-content.active');
             if (activeContent) {
-                tabWrapper.style.height = activeContent.offsetHeight + 'px';
+                tabWrapper.style.height = activeContent.scrollHeight + 'px';
             }
         }
+        
 
-        // 초기 높이 설정
-        window.addEventListener('load', updateHeight);
+        window.addEventListener('DOMContentLoaded', updateHeight);
+
+
 
         tabButtons.forEach((btn, index) => {
             btn.addEventListener('click', () => {
-                // 버튼 활성화
                 tabButtons.forEach(b => {
                     b.classList.remove('active');
                     b.setAttribute('aria-selected', 'false');
@@ -619,19 +648,16 @@
                 btn.classList.add('active');
                 btn.setAttribute('aria-selected', 'true');
 
-                // 콘텐츠 전환
                 tabContents.forEach(content => content.classList.remove('active'));
                 tabContents[index].classList.add('active');
 
-                // 높이 애니메이션
                 updateHeight();
             });
         });
 
-
         // httab gsap
-        gsap.set('.ht_title',{autoAlpha:0});
-        gsap.set('.ht_tab--section .ht_tab--content',{autoAlpha:0});
+        gsap.set('.ht_title', {  y:100 });
+        gsap.set('.ht_tab--section .ht_tab--content', { autoAlpha: 0 });
         const tabGsap = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.ht_tab--section'),
@@ -640,14 +666,11 @@
             }
         });
 
-        tabGsap.to('.ht_title',{autoAlpha:1});
-        tabGsap.to('.ht_tab--section .ht_tab--content',{autoAlpha:1});
+        tabGsap.to('.ht_title', {  y:0 });
+        tabGsap.to('.ht_tab--section .ht_tab--content', { autoAlpha: 1 });
 
 
     </script>
-
-
-
 
 </body>
 

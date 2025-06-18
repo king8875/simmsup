@@ -16,8 +16,11 @@
     --odd-bg : #f7f7f7;
     --fc-subtit : #585656;
     --fz-maintit : 45px;
+    --fz-maintit--mobile : 32px;
 
     --mobile-padding : 15px;
+
+    --box-shadow : rgba(0, 0, 0, 0.25) -2px 3px 90px -20px !important;
 }
 
 

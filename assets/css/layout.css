@@ -490,6 +490,25 @@
         justify-content: center;
         height: calc(100vh - 9.2rem);
     }
+
+    /* subpage */
+    .sp_header--tit{
+        font-weight: var(--font-eb);
+        font-size: var(--fz-maintit--mobile);
+        margin-bottom: 28px;
+        overflow: hidden;
+    }
+    
+    
+    
+    
+
+
+
+
+
+
+
     /* footer */
     .footer{
         padding: 30px 0;

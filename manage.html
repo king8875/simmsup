@@ -78,11 +78,13 @@
                     </ul>
                     <ul id="sidelist_03">
                         <li class="side_right--tit bold_18"><a href="">정기봉사</a></li>
+                        <li><a href="">섬즈업과 함께한 곳</a></li>
                         <li><a href="">함께하는 방법</a></li>
                         <li><a href="">참가 신청하기</a></li>
                     </ul>
                     <ul id="sidelist_03">
                         <li class="side_right--tit bold_18"><a href="">후원하기</a></li>
+                        <li><a href="">후원가이드</a></li>
                         <li><a href="">후원하기</a></li>
                     </ul>
                 </div>
@@ -225,12 +227,12 @@
                             <div class="manage_first--top">
                                 <span class="over-h"><strong class="name">윤승철</strong></span>
                                 <ul>
-                                    <li><p><strong>현)</strong>동아시아바다공동체 오션 객원연구원</p></li>
-                                    <li><p><strong>현)</strong>한국섬진흥원 정책자문위원</p></li>
-                                    <li><p><strong>현)</strong>전라남도 섬가꾸기 자문위원</p></li>
-                                    <li><p><strong>전)</strong>국가해양수산과학기술 육성 기본계획 수립위원</p></li>
-                                    <li><p><strong>전)</strong>자원봉사진흥위원회 민간위원</p></li>
-                                    <li><p><strong>전)</strong>100섬 100길 현장 실사 및 답사 연구원</p></li>
+                                    <li><p><strong>현)</strong> 동아시아바다공동체 오션 객원연구원</p></li>
+                                    <li><p><strong>현)</strong> 한국섬진흥원 정책자문위원</p></li>
+                                    <li><p><strong>현)</strong> 전라남도 섬가꾸기 자문위원</p></li>
+                                    <li><p><strong>전)</strong> 국가해양수산과학기술 육성 기본계획 수립위원</p></li>
+                                    <li><p><strong>전)</strong> 자원봉사진흥위원회 민간위원</p></li>
+                                    <li><p><strong>전)</strong> 100섬 100길 현장 실사 및 답사 연구원</p></li>
                                 </ul>
                             </div>
                             <div class="manage_first--bottom">
@@ -434,17 +436,17 @@
 
 
         // visual image animation
-        gsap.set('.manage_visual--img', { backgroundPosition: '50% 90%' });
+        gsap.set('.manage_visual--img', { backgroundPosition: '50% 50%' });
         const manageVisual = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.manage_visual--block'),
                 start: "0% 20%",
-                end: "50% 20%",
-                scrub:1,
+                end: "60% 20%",
+                scrub:0.3,
             }
         });
 
-        manageVisual.to('.manage_visual--img', { backgroundPosition: '50% 190%', ease: 'none' });
+        manageVisual.to('.manage_visual--img', { backgroundPosition: '50% 180%', ease: 'none' });
 
         // manage second gsap
         gsap.set('.manage_first_img--block',{autoAlpha:0, y:40});
@@ -478,14 +480,6 @@
         },"<");
         manageFirst.to('.manage_first--bottom',{ autoAlpha:1 });
        
-
-        
-
-
-
-
-
-
     </script>
 
 

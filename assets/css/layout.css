@@ -250,7 +250,7 @@
 }
 .side_bottom--block .side_bottom--right ul .side_right--tit{
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .side_bottom--block .side_bottom--right ul .side_right--tit a {
     display: flex;
@@ -461,7 +461,7 @@
         display: none;
     }
     .header .header_inner .header_nav--block{
-        margin-right: 20px;
+        margin-right: 10px;
         margin-left: auto;
     }
 

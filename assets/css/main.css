@@ -1230,7 +1230,6 @@
 .manage_second--block{
     margin-top: 80px;
     margin-bottom: 100px;
-    
 }
 .manage_second--block ul{
     display: flex;
@@ -1741,6 +1740,51 @@
     .manage_visual--block .text--block p{
         font-size: 14px;
     }
+
+
+    .manage_second--block{
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .manage_second--block ul{
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .manage_second--block ul li{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1;
+    }
+    .manage_second--block ul li .user_info--block{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .manage_second--block ul li .img--block{
+        min-width: 300px;
+    }
+    .manage_second--block ul li .img--block img{
+        width: 100%;
+        height: 100%;
+    }
+    .manage_second--block ul li strong{
+        font-weight: var(--font-b);
+        font-size: 24px;
+    }
+    .manage_second--block ul li p{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-weight: var(--font-m);
+        font-size: 16px;
+        color: #585656;
+    }
+    .manage_second--block ul li p span{}
+
+
+
 }
 
 @keyframes marquee {

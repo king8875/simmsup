@@ -1,7 +1,4 @@
 
-
-
-
 // header js -- common
 let lastScrollY = window.scrollY;
 const header = document.querySelector('.header');
@@ -42,11 +39,6 @@ document.querySelector("#GoToTop").addEventListener("click", function () {
         ease: "power2.out"
     });
 });
-
-
-
-
-
 
 
 // sidemenu target js
@@ -120,8 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-
     headerNavItem.forEach((item, index) => {
         item.addEventListener('mouseenter', () => {
             headerNavItem.forEach((nav, i) => {
@@ -133,8 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-
-    // 마우스가 전체 nav에서 벗어났을 때 모두 원래대로
     headerNav.addEventListener('mouseleave', () => {
         headerNavItem.forEach(nav => nav.classList.remove('dimmed'));
     });
@@ -184,11 +172,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // // pc
-// mm.add("(min-width: 993px)", () => {
-
-
-
-
-
-
-// });
+// mm.add("(min-width: 993px)", () => {});

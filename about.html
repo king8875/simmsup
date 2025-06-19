@@ -20,10 +20,10 @@
 
 <body>
 
-    <div class="side_menu_overlay">
+    <div class="side_menu_overlay z-index3">
         <span class="blind">사이드메뉴 오버레이</span>
     </div>
-    <div class="side_menu--block" id="sideMenu">
+    <div class="side_menu--block z-index3" id="sideMenu">
         <div class="side_menu--inner">
             <div class="side_top--block">
                 <button class="btn close--btn">
@@ -88,7 +88,7 @@
             </div>
         </div>
     </div>
-    <header class="header">
+    <header class="header z-index2">
         <div class="header_inner">
             <div class="header_logo--block">
                 <a href="#">
@@ -202,16 +202,16 @@
                     <div class="abswiper_content">
                         <div class="abswiper--left">
                             <div class="abswiper--left-text">
-                                <p>
+                                <p class="b500">
                                     섬은 육지의 쓰레기가 최종적으로 모이는 곳으로,
                                     사람의 손길이 닿지 않아 방치된 해양 쓰레기가 많은 곳들입니다.
                                 </p>
-                                <p>
+                                <p class="b500">
                                     대양으로 빠져나가기 전, 적시에
                                     그리고 마지막으로 수거할 수 있는 곳에서 9년째 활동하고 있습니다.
                                 </p>
                                 <div class="about_swiper_control">
-                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-pagination z-index2"></div>
                                     <div class="btn autoplay--btn">
                                         <div class="play_ic--block">
                                             <img src="assets/img/main/logo/play_ic.svg" alt="재생">
@@ -231,19 +231,19 @@
                                     </div>
                                 </li>
                                 <li class="about_swiper_slide swiper-slide">
-                                    <div class="img--block"><img src="assets/img/main/about/abswiper_img01.jpg" alt="">
+                                    <div class="img--block"><img src="assets/img/main/about/abswiper_img02.jpg" alt="">
                                     </div>
                                 </li>
                                 <li class="about_swiper_slide swiper-slide">
-                                    <div class="img--block"><img src="assets/img/main/about/abswiper_img01.jpg" alt="">
+                                    <div class="img--block"><img src="assets/img/main/about/abswiper_img03.jpg" alt="">
                                     </div>
                                 </li>
                                 <li class="about_swiper_slide swiper-slide">
-                                    <div class="img--block"><img src="assets/img/main/about/abswiper_img01.jpg" alt="">
+                                    <div class="img--block"><img src="assets/img/main/about/abswiper_img04.jpg" alt="">
                                     </div>
                                 </li>
                                 <li class="about_swiper_slide swiper-slide">
-                                    <div class="img--block"><img src="assets/img/main/about/abswiper_img01.jpg" alt="">
+                                    <div class="img--block"><img src="assets/img/main/about/abswiper_img05.jpg" alt="">
                                     </div>
                                 </li>
                             </ul>
@@ -257,7 +257,8 @@
                 <div class="inner">
                     <div class="ab_img--area_content">
                         <div class="img--block">
-                            <img src="assets/img/main/about/ab_img02.png" alt="">
+                            <img class="ab_sim_img_pc" src="assets/img/main/about/ab_sim_pc.png" alt="">
+                            <img class="ab_sim_img_m" src="assets/img/main/about/ab_sim_m.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -511,12 +512,13 @@
 
         // about swiper js
         const aboutSwiper = new Swiper('.abswiper_section .swiper', {
-
+            
             loop: true,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false
             },
+            effect: "fade",
             pagination: {
                 clickable: true,
                 el: '.swiper-pagination',

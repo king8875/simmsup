@@ -6,17 +6,12 @@
     margin: -1px;
     clip: rect(0, 0, 0, 0);
 }
-
 .inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
-
-.btn {
-    cursor: grab;
-}
-
+.btn { cursor: grab; }
 .section_header--block {
     display: flex;
     justify-content: space-between;
@@ -24,40 +19,31 @@
     margin-bottom: 30px;
 }
 
-
 /* 스와이퍼 버튼 초기화 */
 .swiper-button-prev:after,
 .swiper-button-next:after {
     display: none;
 }
-
 .main-tit {
     font-size: 34px;
     font-weight: var(--font-b);
     line-height: 1.2;
 }
-
 .main-subtit {
     font-size: 18px;
     font-weight: var(--font-b);
     color: var(--fc-subtit);
     line-height: 1.2;
 }
-
 .bold_18 {
     font-weight: var(--font-b) !important;
     font-size: 18px !important;
 }
 
-
 /* more btn */
-.more--block {
-    position: relative;
-}
+.more--block { position: relative; }
 
-.more--block span {
-    margin-right: 10px;
-}
+.more--block span { margin-right: 10px; }
 
 .more--block a {
     display: flex;

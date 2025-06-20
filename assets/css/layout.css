@@ -263,10 +263,12 @@
 /* subpage */
 
 .sp_header--tit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-weight: var(--font-eb);
     font-size: var(--fz-maintit);
     margin-bottom: 34px;
-    overflow: hidden;
 }
 .subPage_header--block { margin-top: calc(80px + 60px); }
 .sp_breadcrump { margin-bottom: 50px; }
@@ -324,6 +326,73 @@
     font-size: 16px;
     color: #ddd;
 }
+
+/* sp_share btn css */
+
+.share_btn--wrapper{
+    position: relative;
+
+}
+.share_btn--wrapper .share_ic{
+    width: 25px;
+    height: 25px;
+}
+.share_btn--wrapper .share_btn_util--block{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -20px;
+    right: 35px;
+    width: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 20px;
+    transition: all .4s ease;
+    background: #fff;
+}
+.share_btn--wrapper .share_btn_util--block.active{
+    visibility: visible;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 22px -10px;
+}
+.share_btn--wrapper .share_btn_util--block::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: rotate(90deg);
+    right: -14px;
+    border-bottom: 25px solid #fff;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    border-radius: 2px;
+    margin-top: -12px;
+}
+.share_btn--wrapper .share_btn_util--block li{}
+.share_btn--wrapper .share_btn_util--block li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: all .4s ease;
+}
+.share_btn--wrapper .share_btn_util--block li a:hover{
+    transform: translateY(-3px);
+
+}
+
+
+
+
+
+
+
+
 
 /* footer */
 .footer{
@@ -481,10 +550,10 @@
 
     /* subpage */
     .sp_header--tit{
+        align-items: flex-end;
         font-weight: var(--font-eb);
         font-size: var(--fz-maintit--mobile);
         margin-bottom: 28px;
-        overflow: hidden;
     }
     
     

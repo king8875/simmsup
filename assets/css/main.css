@@ -1422,6 +1422,95 @@
 
 
 
+/* textboard section css */
+
+.cg_textboard_section{}
+.cg_tb_content{
+    display: flex;
+    flex-direction: column;
+    padding: 55px 0;
+    border-top: 4px solid #000;
+}
+.cg_tb_content .tb_tit--block{}
+.cg_tb_content .tb_tit--block .tb_tit{
+    font-size: 34px;
+    font-weight: var(--font-eb);
+    color: #000;
+}
+
+.tb_pagination--block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-top: 1px solid #000;
+}
+.tb_pagination--block .tb_page_next--area,
+.tb_pagination--block .tb_page_prev--area{
+    display: flex;
+    align-items: center;
+}
+.tb_pagination--block .tb_page_prev--area .btn{
+    transform: rotate(180deg);
+}
+.tb_pagination--block .tb_page_prev--area p{
+    margin-left: 2px;
+    margin-right: 10px;
+}
+.tb_pagination--block .tb_page_next--area p{
+    margin-left: 10px;
+    margin-right: 2px;
+}
+.tb_pagination--block .tb_page_next--area p,
+.tb_pagination--block .tb_page_prev--area p{
+    font-size: 16px;
+    font-weight: var(--font-b);
+
+}
+.tb_pagination--block .tb_page_next--area span,
+.tb_pagination--block .tb_page_prev--area span{
+    font-size: 14px;
+    font-weight: var(--font-m);
+    color: #666666;
+}
+.tb_pagination--block .tb_page_next--area{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.tb_pagination--block .tb_page_menu--area{
+    width: 70px;
+    height: 70px;
+    background: #f0f0f0;
+}
+.tb_pagination--block .tb_page_menu--area .menu_ic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* marquee *//* marquee *//* marquee *//* marquee *//* marquee *//* marquee *//* marquee */
 .marquee--block {
@@ -1934,7 +2023,21 @@
         gap: 10px;
         margin-bottom: 50px;
     }
+
+    /* cg_textboard css */
+    .cg_tb_content{
+        padding: 30px 0;
+        border-top: 2px solid #000;
+    }
+    .tb_pagination--block .tb_page_next--area span,
+    .tb_pagination--block .tb_page_prev--area span{
+        display: none;
+    }
 }
+
+
+
+
 
 @keyframes marquee {
     0% {

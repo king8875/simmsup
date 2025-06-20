@@ -553,16 +553,19 @@
         });
 
 
-
-        const manageVisual = gsap.timeline({
+        gsap.set('.donate_how--block .how-item',{autoAlpha:0, y:50});
+        const donate = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.donate_how--block'),
                 start: "0% 50%",
                 end: "100% 50%",
-                markers:true
             }
         });
-
+        donate.to('.donate_how--block .how-item',{
+            autoAlpha:1,
+            stagger:0.2,
+            y:0
+        });
 
 
 

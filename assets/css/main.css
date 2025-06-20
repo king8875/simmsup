@@ -1481,7 +1481,14 @@
 .tb_pagination--block .tb_page_menu--area{
     width: 70px;
     height: 70px;
+    transition: all .4s ease;
     background: #f0f0f0;
+}
+.tb_pagination--block .tb_page_menu--area:hover{
+    background: var(--primary-blue);
+}
+.tb_pagination--block .tb_page_menu--area:hover .menu_ic path{
+    fill: #fff;
 }
 .tb_pagination--block .tb_page_menu--area .menu_ic{
     display: flex;
@@ -1489,18 +1496,184 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    transition: all .4s ease;
 }
 
 
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+
+/* DONATE PAGE CSS */
+
+.donate_section{}
+.donate_content{}
+
+.donate_how--block{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 70px;
+}
+.donate_how--block .how--tit{
+    font-weight: var(--font-b);
+    font-size: 34px;
+    color: #000;
+}
+.donate_how--block .how--subtit{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+.donate_how--block .how--subtit strong{
+    font-weight: var(--font-b);
+    font-size: 18px;
+    color: #000;
+}
+.donate_how--block .how--subtit p{
+    font-weight: var(--font-m);
+    font-size: 16px;
+    color: #585656;
+    line-height: 1.6;
+}
+
+.donate_how--block .how-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.donate_how--block .how-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 350px;
+    padding: 30px 0 40px 30px;
+    background: #F0F0F0;
+}
+.donate_how--block .how-item .img--block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    background: #fff;
+}
+.donate_how--block .how-item .img--block img{
+    width: 40px;
+    height: 41px;
+}
+.donate_how--block .how-item .how-item--tit{
+    font-weight: var(--font-b);
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+}
+.donate_how--block .how-item .how-item--subtit{
+    font-weight: var(--font-m);
+    font-size: 16px;
+    color: #585656;
+}
 
 
+.donate_how--block .how--notice{
+    font-weight: var(--font-m);
+    font-size: 16px;
+    color: #585656;
+}
+
+.donate_why--block{
+    display: flex;
+    justify-content: flex-start;
+    gap: 120px;
+    margin: 100px 0px;
+}
+.donate_why--block .why--tit{
+    font-weight: var(--font-b);
+    font-size: 34px;
+    color: #000;
+}
+.donate_why--block .why--list{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.donate_why--block .why--item{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+}
+.donate_why--block .why--item .img--block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f7f7f7;
+}
+.donate_why--block .why--item .img--block img{}
+.donate_why--block .why--item .why_desc{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.donate_why--block .why--item .why_desc strong{
+    font-weight: var(--font-b);
+    font-size: 20px;
+    color: #000;
+}
+.donate_why--block .why--item .why_desc p{
+    font-weight: var(--font-m);
+    font-size: 16px;
+    line-height: 1.4;
+    color: #585656;
+}
 
 
+.donate_outro--content{
+    position: relative;
+}
+.donate_outro--content .img--block{
+    position: relative;
+    width: 100%;
+    filter: brightness(0.8);
+}
+.donate_outro--content .img--block img{
+    width: 100%;
+    height: 100%;
+}
+.donate_outro--content .text--block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+.donate_outro--content .text--block p{
+    font-weight: var(--font-b);
+    font-size: 18px;
+}
+.donate_outro--content .text--block strong{
+    font-weight: var(--font-eb);
+    font-size: 45px;
 
-
-
-
-
+}
+.donate_outro--content .donate--btn{
+    margin-top: 30px;
+}
+.donate_outro--content .donate--btn a{
+    padding: 18px 26px;
+    border: 2px solid #fff;
+    font-size: 20px;
+    font-weight: var(--font-b);
+}
 
 
 

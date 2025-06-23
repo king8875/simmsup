@@ -1673,16 +1673,155 @@
     border: 2px solid #fff;
     font-size: 20px;
     font-weight: var(--font-b);
+    transition: all .4s ease;
+}
+.donate_outro--content .donate--btn a:hover{
+    background: var(--primary-blue);
+    /* border: none; */
+    border: 2px solid var(--primary-blue);
 }
 
 
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+
+/* QUESTION PAGE CSS */
+
+.question_section{
+}
+.question_visual--block{
+    position: relative;
+    width: 100%;
+}
+.question_visual--block .img--block{
+    filter: brightness(0.8);
+}
+.question_visual--img--mobile{
+    display: none;
+}
+.question_visual--img{
+    background: url("../img/main/question/together_img.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 730px;
+}
+.question_visual--block .text--block{
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.question_visual--block .text--block strong{
+    font-size: 24px;
+    font-weight: var(--font-b);
+    line-height: 1.4;
+    color: #fff;
+}
+.question_visual--block .text--block p{
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: var(--font-sb);
+    color: #ddd;
+}
+
+.question_content--block{
+    position: relative;
+}
+.question_content--block .quest_content--tit{
+    font-size: 34px;
+    font-weight: var(--font-b);
+    color: #000;
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+.question_content--block .question--list{
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #000;
+    border-bottom: 2px solid #000;
+
+}
+.question_content--block .question--list .question--item{
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+.question_content--block .question--list .question--item.active{
+    background: #f7f7f7;
+}
+.question_content--block .q_item--block{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question_content--block .q_item--block span{
+    font-weight: var(--font-b);
+    font-size: 20px;
+    margin-right: 15px;
+    color: #000;
+}
+.question_content--block .q_item--block strong{
+    font-weight: var(--font-b);
+    font-size: 20px;
+    color: #000;
+    flex: 1;
+}
+.question_content--block .q_item--block  .plus_ic{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: all .3s ease;
+
+}
+.question_content--block .q_item--block .minus_ic{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: all .3s ease;
+
+}
+.question_content--block .q_hidden--block{
+    display: flex;
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .3s ease;
 
 
+}
+.question_content--block .q_hidden--block span{
+    font-size: 20px;
+    margin-right: 15px;
+}
+.question_content--block .q_hidden--block strong{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #585656;
+    max-width: 600px;
+}
 
+.question_content--block .q_hidden--block.active {
+    max-height: 900px; 
+    opacity: 1;
+    padding: 20px 0;
 
-
-
-
+}
 
 
 /* marquee *//* marquee *//* marquee *//* marquee *//* marquee *//* marquee *//* marquee */
@@ -2205,6 +2344,122 @@
     .tb_pagination--block .tb_page_next--area span,
     .tb_pagination--block .tb_page_prev--area span{
         display: none;
+    }
+    /* donate css */
+
+    .donate_how--block .how--tit{
+        font-size: 28px;
+    }
+    .donate_how--block{
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .donate_how--block .how--subtit strong{
+        font-size: 16px;
+    }
+    .donate_how--block .how--subtit p{
+        font-size: 14px;
+    }
+    .donate_how--block .how-list{
+        gap: 10px;
+    }
+    .donate_how--block .how-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+    .donate_how--block .how--notice{
+        font-size: 12px;
+    }
+    .donate_why--block{
+        flex-direction: column;
+        gap: 30px;
+        margin: 50px 0px;
+    }
+    .donate_how--block .how-item .img--block{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    .donate_how--block .how-item .how-item--tit{
+        
+        font-size: 18px;
+    }
+    .donate_how--block .how-item .how-item--subtit{
+        font-size: 16px;
+    }
+    .donate_why--block .why--tit{
+        font-size: 28px;
+    }
+    .donate_why--block .why--item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 15px 0;
+    }
+    .donate_why--block .why--item .why_desc{
+        flex: 1;
+    }
+    .donate_why--block .why--item .why_desc strong{
+        font-size: 16px;
+    }
+    .donate_why--block .why--item .why_desc p{
+        font-size: 14px;
+    }
+    .donate_outro--content{
+        display: flex;
+        position: relative;
+        height: 300px;
+    }
+    .donate_outro--content .text--block strong{
+        font-size: 18px;
+    }
+    .donate_outro--content .text--block p{
+        font-size: 14px;
+    }
+    .donate_outro--content .donate--btn a{
+        padding: 12px 22px;
+        border: 1px solid #fff;
+        font-size: 14px;
+    }
+
+
+    /* question page */
+    .question_visual--img{
+        display: none;
+    }
+    .question_visual--img--mobile{
+        display: block;
+    }
+    .question_visual--block .text--block{
+        top: 30px;
+        left: 30px;
+    }
+    .question_visual--block .text--block strong{
+        font-size: 18px;
+    }
+    .question_visual--block .text--block p{
+        font-size: 14px;
+    }
+    .question_content--block .quest_content--tit{
+        font-size: 28px;
+        padding-top: 30px;
+        
+    }
+    .question_content--block .question--list .question--item{
+        padding: 20px;
+    }
+    .question_content--block .q_item--block strong{
+        font-size: 16px;
+    }
+    .question_content--block .q_hidden--block strong{
+        font-size: 14px;
+    }
+    .question_content--block .q_hidden--block.active{
+        padding: 10px 0;
     }
 }
 

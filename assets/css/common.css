@@ -79,21 +79,26 @@
     transform: translateX(0%);
 }
 
+/* hover했을시 */
+.apply--item:hover .more--block .first-arrow,
 .more--block:hover .first-arrow,
 .notice_item.active:hover .first-arrow {
     animation: firstArrowOut 0.4s ease forwards;
 }
 
+.apply--item:hover .more--block .second-arrow,
 .more--block:hover .second-arrow,
 .notice_item.active:hover .second-arrow {
     animation: secondArrowIn 0.4s ease forwards;
 }
 
+/* not hover했을시 */
+.apply--item:not(:hover) .more--block .first-arrow,
 .more--block:not(:hover) .first-arrow,
 .notice_item.active:not(:hover) .first-arrow {
     animation: firstArrowIn 0.4s ease forwards;
 }
-
+.apply--item:not(:hover) .more--block .second-arrow,
 .more--block:not(:hover) .second-arrow,
 .notice_item.active:not(:hover) .second-arrow {
     animation: secondArrowOut 0.4s ease forwards;
@@ -220,6 +225,9 @@ strong {
 .mt100{
     margin-top: 100px;
 }
+.mt50{
+    margin-top: 50px;
+}
 
 
 
@@ -342,4 +350,8 @@ strong {
     .mt100{
         margin-top: 50px;
     }
+    .mt50{
+        margin-top: 25px;
+    }
+    
 }

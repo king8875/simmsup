@@ -436,17 +436,17 @@
 
 
         // visual image animation
-        gsap.set('.manage_visual--img', { backgroundPosition: '50% 50%' });
+        gsap.set('.manage_visual--img', { backgroundPosition: '50% 70%' });
         const manageVisual = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.manage_visual--block'),
                 start: "0% 20%",
                 end: "60% 20%",
-                scrub:0.3,
+                scrub:0.1,
             }
         });
 
-        manageVisual.to('.manage_visual--img', { backgroundPosition: '50% 180%', ease: 'none' });
+        manageVisual.to('.manage_visual--img', { backgroundPosition: '50% 150%', ease: 'none' });
 
         // manage second gsap
         gsap.set('.manage_first_img--block',{autoAlpha:0, y:40});

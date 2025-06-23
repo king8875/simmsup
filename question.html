@@ -580,18 +580,18 @@
 
 
         // visual image animation
-        gsap.set('.question_visual--img', { backgroundPosition: '40% -60%' });
+        gsap.set('.question_visual--img', { backgroundPosition: '40% -30%' });
         const questionVisual = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.question_visual--block'),
                 start: "0% 20%",
                 end: "60% 20%",
-                scrub:0.3,
+                scrub:0.1,
             }
         });
 
         questionVisual.to('.question_visual--img', { 
-            backgroundPosition: '40% 120%',
+            backgroundPosition: '40% 40%',
             ease: 'none' 
         });
 

@@ -833,16 +833,12 @@
 
 
 
-
-
-
-
 /* project section */
 .projects-sec {
     position: relative;
     height: 800vh;
-    overscroll-behavior-x: none !important;
-    touch-action: pan-y !important; 
+    /* overscroll-behavior-x: none !important; */
+    /* touch-action: pan-y !important;  */
 }
 
 .projects-inner {

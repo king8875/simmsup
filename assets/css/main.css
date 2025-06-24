@@ -841,6 +841,8 @@
 .projects-sec {
     position: relative;
     height: 800vh;
+    overscroll-behavior-x: none !important;
+    touch-action: pan-y !important; 
 }
 
 .projects-inner {
@@ -934,6 +936,7 @@
 .projects-sec::-webkit-scrollbar {
     scrollbar-width: none !important;
     display: none !important;
+ 
 }
 
 

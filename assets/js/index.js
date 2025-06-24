@@ -33,15 +33,15 @@ function handleScroll() {
 
     if (heroBottom > 0) {
         if (isHeaderHidden) {
-            gsap.to(header, { yPercent: 0, duration: 0.5 });
+            gsap.to(header, { y: 0, duration: 0.5 });
             isHeaderHidden = false;
         }
     } else {
         if (currentScrollY > lastScrollY && !isHeaderHidden) {
-            gsap.to(header, { yPercent: -100, duration: 0.5 });
+            gsap.to(header, { y: -100, duration: 0.5 });
             isHeaderHidden = true;
         } else if (currentScrollY < lastScrollY && isHeaderHidden) {
-            gsap.to(header, { yPercent: 0, duration: 0.5 });
+            gsap.to(header, { y: 0, duration: 0.5 });
             isHeaderHidden = false;
         }
     }

@@ -766,20 +766,19 @@
         // 실제 페이지 로드 완료 후
         window.addEventListener('load', () => {
 
-            const preLoad = gsap.timeline({});
+            gsap.set('.header', { y: -100 });
+            gsap.set('.wrapper', { y: -80 });
+            gsap.set('.hero_section .swiper', { height: '100vh' });
+            gsap.set('.hero_swiper_control', { autoAlpha: 0 });
+            gsap.set('.hero_swiper_btn--group', { autoAlpha: 0 });
 
-            preLoad.set('.header', { yPercent: -100 });
-            preLoad.set('.wrapper', { y: -80 });
-            preLoad.set('.hero_section .swiper', { height: '100vh' });
-            preLoad.set('.hero_swiper_control', { autoAlpha: 0 });
-            preLoad.set('.hero_swiper_btn--group', { autoAlpha: 0 });
+            const preLoad = gsap.timeline({});
 
             preLoad.to('.wrapper', { y: 0, duration: 0.8 });
             preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.6 });
             preLoad.to('.hero_swiper_control', { autoAlpha: 1 });
             preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 });
-
-            preLoad.to('.header', { yPercent: 0 });
+            preLoad.to('.header', { y: 0 });
         });
         // hero swiper
         const slides = document.querySelectorAll('.hero_content .img--block');
@@ -815,7 +814,6 @@
                         imgBlock.classList.add('scale-up');
                     }
                 },
-
             }
         });
 

@@ -1,25 +1,61 @@
 
 // header js -- common
+// let lastScrollY = window.scrollY;
+// const header = document.querySelector('.header');
+// const heroSection = document.querySelector('.lo-first-section');
+
+// window.addEventListener('scroll', () => {
+//     const currentScrollY = window.scrollY;
+//     const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+//     if (heroBottom > 0) {
+//         gsap.to(header, { yPercent: 0, duration: 0.5 });
+//     } else {
+//         if (currentScrollY > lastScrollY) {
+//             gsap.to(header, { yPercent: -100, duration: 0.5 });
+//         } else {
+//             gsap.to(header, { yPercent: 0, duration: 0.5 });
+//         }
+//     }
+//     lastScrollY = currentScrollY;
+// });
+
 let lastScrollY = window.scrollY;
 const header = document.querySelector('.header');
 const heroSection = document.querySelector('.lo-first-section');
 
-window.addEventListener('scroll', () => {
+let ticking = false;
+let isHeaderHidden = false;
+
+function handleScroll() {
     const currentScrollY = window.scrollY;
     const heroBottom = heroSection.getBoundingClientRect().bottom;
 
     if (heroBottom > 0) {
-        gsap.to(header, { yPercent: 0, duration: 0.5 });
-    } else {
-        if (currentScrollY > lastScrollY) {
-            gsap.to(header, { yPercent: -100, duration: 0.5 });
-        } else {
+        if (isHeaderHidden) {
             gsap.to(header, { yPercent: 0, duration: 0.5 });
+            isHeaderHidden = false;
+        }
+    } else {
+        if (currentScrollY > lastScrollY && !isHeaderHidden) {
+            gsap.to(header, { yPercent: -100, duration: 0.5 });
+            isHeaderHidden = true;
+        } else if (currentScrollY < lastScrollY && isHeaderHidden) {
+            gsap.to(header, { yPercent: 0, duration: 0.5 });
+            isHeaderHidden = false;
         }
     }
-    lastScrollY = currentScrollY;
-});
 
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(handleScroll);
+        ticking = true;
+    }
+});
 
 // loading -- common
 window.addEventListener('load', () => {

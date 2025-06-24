@@ -412,14 +412,12 @@
         // 실제 페이지 로드 완료 후
         window.addEventListener('load', () => {
 
+            
+            gsap.set('.sp_header--tit h2',{y:50});
+            gsap.set('.abswiper_content',{ autoAlpha:0 });
+            gsap.set('.abswiper--left-text p',{ autoAlpha:0, });
+            
             const preLoad = gsap.timeline({});
-
-            preLoad.set('.sp_header--tit h2',{y:50});
-            preLoad.set('.abswiper_content',{ autoAlpha:0 });
-            preLoad.set('.abswiper--left-text p',{
-                autoAlpha:0,
-            });
-
 
             preLoad.to('.sp_header--tit h2',{
                 y:0,
@@ -434,33 +432,6 @@
                 duration:0.5
             });
         });
-
-        
-
-        const toggleBtn = document.querySelector('.autoplay--btn');
-        const playIcon = toggleBtn.querySelector('.play_ic--block');
-        const pauseIcon = toggleBtn.querySelector('.pause_ic--block');
-        let isPlaying = true;
-
-        playIcon.style.display = 'none';
-        pauseIcon.style.display = 'block';
-
-        toggleBtn.addEventListener('click', function () {
-            if (isPlaying) {
-                mainswiper.autoplay.stop();
-                toggleBtn.classList.remove('playing');
-                playIcon.style.display = 'block';
-                pauseIcon.style.display = 'none';
-            } else {
-                mainswiper.autoplay.start();
-                toggleBtn.classList.add('playing');
-                playIcon.style.display = 'none';
-                pauseIcon.style.display = 'block';
-            }
-            isPlaying = !isPlaying;
-        });
-
-
 
         /* ab_img--area */
         gsap.set('.ab_img--area .img--block',{ autoAlpha:0 });
@@ -481,7 +452,7 @@
         // ab_caf--content
         gsap.set('.caf-tit',{ autoAlpha:0, y:30 });
         gsap.set('.ab_caf--area .ab_caf--content .img--block',{ autoAlpha:0 });
-        gsap.set('.caf-subtit',{ autoAlpha:0, yPercent:50 });
+        gsap.set('.caf-subtit',{ autoAlpha:0, y:50 });
         const abCafArea = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.ab_caf--area'),
@@ -502,13 +473,9 @@
         abCafArea.to('.caf-subtit',{
             autoAlpha:1,
             duration:0.5,
-            yPercent:0
+            y:0
         },"<+0.2");
     
-
-
-
-
         // about swiper js
         const aboutSwiper = new Swiper('.abswiper_section .swiper', {
             
@@ -547,9 +514,6 @@
                 }
                 isPlaying = !isPlaying;
             });
-
-
-
         });
     </script>
 

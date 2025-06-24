@@ -437,11 +437,11 @@
                 trigger: document.querySelector('.manage_visual--block'),
                 start: "0% 20%",
                 end: "10% 20%",
-                scrub:0.5,
+                scrub:1,
             }
         });
 
-        manageVisual.to('.manage_visual--img', { backgroundPosition: '50% 90%', ease: 'none' });
+        manageVisual.to('.manage_visual--img', { backgroundPosition: '50% 70%', ease: 'none' });
 
         // manage second gsap
         gsap.set('.manage_first_img--block',{autoAlpha:0, y:40});
@@ -455,25 +455,14 @@
                 trigger: document.querySelector('.manage_first--block'),
                 start: "0% 50%",
                 end: "80% 50%",
-                // markers:true
             }
         });
 
         manageFirst.to('.manage_first_img--block',{autoAlpha:1, y:0});
         manageFirst.to('.manage_first--top .name',{ y:0},"<");
-     
-        manageFirst.to('.manage_first--top ul li p',{ 
-            y:0,
-            stagger:0.2,
-            duration:0.5
-        });
-        manageFirst.to('.manage_second--block ul li', { 
-            autoAlpha:1,
-            stagger:0.7,
-            duration:0.5,
-            y:0
-        },"<");
+        manageFirst.to('.manage_first--top ul li p',{ y:0, stagger:0.2, });
         manageFirst.to('.manage_first--bottom',{ autoAlpha:1 });
+        manageFirst.to('.manage_second--block ul li', { autoAlpha:1, stagger:0.5, y:0 },"<-0.1");
        
     </script>
 

@@ -185,15 +185,6 @@
                     <div class="sp_header--tit lo-first-section">
                         <h2>활동 및 연혁</h2>
                     </div>
-                    <!-- <div class="sp_header--banner">
-                        <div class="img--block">
-                            <img src="assets/img/main/supporter/banner_img.jpg" alt="">
-                        </div>
-                        <div class="text--block">
-                            <strong class="b600">섬의 자연을 지키는 일, 혼자서는 해낼 수 없습니다.</strong>
-                            <p class="b500">함께 걷는 후원사와 협력단체 덕분에 섬즈업의 발걸음은 더 단단해집니다.</p>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
@@ -556,7 +547,7 @@
 
 
     <script>
-
+      
         // 실제 페이지 로드 완료 후
         window.addEventListener('load', () => {
 
@@ -579,7 +570,7 @@
                 trigger: '.projects-inner',
                 start: '0% 80%',
                 end: '0% 80%',
-                scrub: 0.2,
+                scrub: 0.1,
             }
         });
         projectIntro.to('.project-img-block img', { width: '100%', });
@@ -590,35 +581,16 @@
                 trigger: '.projects-sec',
                 start: "5% 0%",
                 end: "100% 100%",
-                scrub: 0.7,
+                scrub: true,
                 invalidateOnRefresh: true,
             },
             xPercent: -100,
             x: function () { return (window.innerWidth - 0); }
         });
 
-        // active gsap
-        gsap.set('.ht_active--item', { autoAlpha: 0, y: 20 });
+     
 
-        const activeGsap = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.ht_active--section',
-                start: "top 70%",
-                end: "top 70%",
-                invalidateOnRefresh: true
-            }
-        });
-
-        activeGsap.to('.ht_active--item', {
-            autoAlpha: 1,
-            stagger: 0.3,
-            y: 0,
-            ease: "power2.out"
-        });
-
-        window.addEventListener('load', () => {
-            ScrollTrigger.refresh();
-        });
+    
 
         // tab js
         const tabButtons = document.querySelectorAll('.tab-button');
@@ -665,9 +637,31 @@
         });
 
         tabGsap.to('.ht_title', {  y:0 });
-        tabGsap.to('.ht_tab--section .ht_tab--content', { autoAlpha: 1 });
+        tabGsap.to('.ht_tab--section .ht_tab--content', { 
+            autoAlpha: 1,
+            duration : 0.1
+        });
 
+        // active gsap
+        gsap.set('.ht_active--item', { autoAlpha: 0, y: 20 });
 
+        const activeGsap = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.ht_active--section',
+                start: "top 70%",
+                end: "top 70%",
+                invalidateOnRefresh: true
+            }
+        });
+
+        activeGsap.to('.ht_active--item', {
+            autoAlpha: 1,
+            stagger: 0.3,
+            y: 0,
+        });
+        window.addEventListener('load', () => {
+            ScrollTrigger.refresh();
+        });
     </script>
 
 </body>

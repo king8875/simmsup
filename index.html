@@ -835,7 +835,7 @@
         together.to('.tg--right .tg_btn--item', {
             autoAlpha: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.6,
             ease: "power4.out",
             stagger: 0.3,
         });
@@ -848,7 +848,7 @@
         gsap.set(pjheader, { autoAlpha: 0 });
         gsap.set(pjcontent, {
             autoAlpha: 0,
-            yPercent: 10
+            y: 50
         });
         const project = gsap.timeline({
             scrollTrigger: {
@@ -865,7 +865,7 @@
         project.to(pjcontent, {
             autoAlpha: 1,
             duration: 0.5,
-            yPercent: 0
+            y: 0
         });
 
 
@@ -876,7 +876,7 @@
         gsap.set(newsheader, { autoAlpha: 0 });
         gsap.set(newscontent, {
             autoAlpha: 0,
-            yPercent: 20
+            y: 50
         });
         const news = gsap.timeline({
             scrollTrigger: {
@@ -893,7 +893,7 @@
         project.to(newscontent, {
             autoAlpha: 1,
             duration: 0.5,
-            yPercent: 0,
+            y: 0,
             stagger: 0.3
         });
         document.addEventListener("DOMContentLoaded", () => {

@@ -210,7 +210,7 @@
                             <span class="over-h">
                                 <p>
                                     지켜주고 싶은 섬이 있다면, 지금이 바로 시작할 때입니다.
-                                    <br class="d-none d-md-block">
+                                    <br />
                                     정기봉사부터 재능기부까지, 섬즈업은 누구든 환영합니다.
                                 </p>
                             </span>
@@ -569,7 +569,6 @@
             gsap.set('.question_visual--block .text--block strong',{y:50 ,autoAlpha :0});
             gsap.set('.question_visual--block .text--block p',{y:100});
 
-
             const preLoad = gsap.timeline({});
 
             preLoad.to('.sp_header--tit h2', { y: 0, duration: 0.7 });
@@ -580,18 +579,18 @@
 
 
         // visual image animation
-        gsap.set('.question_visual--img', { backgroundPosition: '40% -30%' });
+        gsap.set('.question_visual--img', { backgroundPosition: '80% 20%' });
         const questionVisual = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.question_visual--block'),
                 start: "0% 20%",
-                end: "60% 20%",
-                scrub:0.1,
+                end: "0% 20%",
+                scrub:1,
             }
         });
 
         questionVisual.to('.question_visual--img', { 
-            backgroundPosition: '40% 40%',
+            backgroundPosition: '80% 25%',
             ease: 'none' 
         });
 
@@ -614,7 +613,6 @@
                     // 닫기
                     item.classList.remove('active');
                     plusBtn.style.opacity = '1';
-
                     minusBtn.style.opacity = '0';
                     hiddenBlock.classList.remove('active')
                 } else {
@@ -624,7 +622,6 @@
                     minusBtn.style.display = 'flex';
                     minusBtn.style.opacity = '1';
                     hiddenBlock.classList.add('active')
-
                 }
             });
         });

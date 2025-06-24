@@ -20,6 +20,8 @@
 //     lastScrollY = currentScrollY;
 // });
 
+
+// header animation common
 let lastScrollY = window.scrollY;
 const header = document.querySelector('.header');
 const heroSection = document.querySelector('.lo-first-section');
@@ -67,11 +69,12 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
+
 // to top button -- common
 document.querySelector("#GoToTop").addEventListener("click", function () {
     gsap.to(window, {
         scrollTo: 0,
-        duration: 1.5,
+        duration: 1,
         ease: "power2.out"
     });
 });
@@ -95,18 +98,19 @@ document.querySelector("#GoToTop").addEventListener("click", function () {
 
 // side menu js -- common
 document.addEventListener('DOMContentLoaded', function () {
+
     const toggleBtn = document.querySelector('.header_sidebar--btn');
-    const sideMenuInner = document.querySelector('.side_menu--inner');
     const sideMenu = document.querySelector('#sideMenu');
     const closeBtn = document.querySelector('.close--btn');
     const sideOverlay = document.querySelector('.side_menu_overlay');
-    const body = document.body;
 
+    // 다른곳 눌렀을때 사이드메뉴 해제
     sideOverlay.addEventListener('click', function () {
         sideMenu.classList.remove("active");
         sideOverlay.classList.remove('active');
     });
 
+    // 열기
     toggleBtn.addEventListener('click', function () {
         sideMenu.classList.toggle('active');
         sideOverlay.classList.toggle('active');
@@ -114,12 +118,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 닫기
     closeBtn.addEventListener("click", function () {
-        sideMenuInner.classList.remove("active");
         sideMenu.classList.remove("active");
         sideOverlay.classList.remove('active');
     });
+
 });
 
+// 서브 해더메뉴
 const headerSearchIcon = document.querySelector('.header_mobile .search_ic--block');
 const sideMobile = document.querySelector('.side_menu--block--mobile');
 const closeBtn = document.querySelector('.side_menu--block--mobile #closeBtn');
@@ -163,6 +168,14 @@ document.addEventListener("DOMContentLoaded", () => {
         headerNavItem.forEach(nav => nav.classList.remove('dimmed'));
     });
 });
+
+
+
+
+
+
+
+
 // headerSearchIcon.addEventListener("click", function () {
 //     sideMobile.classList.add('active');
 //     body.classList.add('scroll-lock');

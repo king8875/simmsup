@@ -48,6 +48,7 @@
     max-width: 55%;
     gap: 20px;
     color: var(--primary-white);
+    overflow: hidden;
 }
 
 .hero_content .tx--block .hero-tit {
@@ -286,7 +287,7 @@
 .together_section .together_inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 var(--mobile-padding);
 }
 
 .together_section .together_content {
@@ -1185,7 +1186,7 @@
 .manage_second--block ul li p span{
     font-size: 16px;
     font-weight: var(--font-m);
-    color: #585656;
+    color: var(--fc-subtit);
 }
 
 
@@ -1205,7 +1206,7 @@
 .cg_all_content .cg_tab--item{}
 .cg_all_content .cg_tab--item .cg_tab--btn{
     display: block;
-    border: 2px solid #585656;
+    border: 2px solid var(--fc-subtit);
     font-size: 16px;
     font-weight: var(--font-sb);
     padding: 13px 24px;
@@ -1527,7 +1528,7 @@
 .donate_how--block .how--subtit p{
     font-weight: var(--font-m);
     font-size: 16px;
-    color: #585656;
+    color: var(--fc-subtit);
     line-height: 1.6;
 }
 
@@ -1567,14 +1568,14 @@
 .donate_how--block .how-item .how-item--subtit{
     font-weight: var(--font-m);
     font-size: 16px;
-    color: #585656;
+    color: var(--fc-subtit);
 }
 
 
 .donate_how--block .how--notice{
     font-weight: var(--font-m);
     font-size: 16px;
-    color: #585656;
+    color: var(--fc-subtit);
 }
 
 .donate_why--block{
@@ -1597,7 +1598,7 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 15px 0;
+    padding: var(--mobile-padding) 0;
     border-top: 1px solid #ddd;
 }
 .donate_why--block .why--item .img--block{
@@ -1624,7 +1625,7 @@
     font-weight: var(--font-m);
     font-size: 16px;
     line-height: 1.4;
-    color: #585656;
+    color: var(--fc-subtit);
 }
 
 
@@ -1807,7 +1808,7 @@
     display: inline-block;
     font-size: 16px;
     line-height: 1.4;
-    color: #585656;
+    color: var(--fc-subtit);
     max-width: 600px;
 }
 
@@ -1851,7 +1852,7 @@
     font-weight: var(--font-b);
     font-size: 14px;
     width: 80px;
-    color: #585656;
+    color: var(--fc-subtit);
 }
 .apply--list .apply--item a .apply_cat.active{
     color: var(--primary-green);
@@ -1963,7 +1964,7 @@
     font-weight: var(--font-b);
     font-size: 14px;
     width: 80px;
-    color: #585656;
+    color: var(--fc-subtit);
 }
 .search--list .search--item a .search_cat.active{
     color: var(--primary-green);
@@ -2117,12 +2118,12 @@
     #heroSwiper .autoplay--btn {
         position: relative;
         margin-left: 30px;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
 
     /* video */
     .video_section .video_inner {
-        padding: 0 15px;
+        padding: 0 var(--mobile-padding);
     }
     .video_inner .video_content {
         display: flex;
@@ -2145,7 +2146,7 @@
 
     /* together */
     .together_section .together_inner {
-        padding: 0 15px;
+        padding: 0 var(--mobile-padding);
     }
 
     .together_section .together_content {
@@ -2316,7 +2317,7 @@
     }
 
     .abswiper_section .abswiper--left .abswiper--left-text {
-        font-weight: 500;
+        font-weight: var(--font-sb);
         gap: 10px;
     }
 
@@ -2417,6 +2418,7 @@
     .ht_active--content .ht_active--list{
         display: flex;
         flex-direction: column;
+        gap: 30px;
     }
     .ht_active--content .ht_active--item{
         flex: 1;
@@ -2522,7 +2524,7 @@
         border-top: 2px solid #000;
     }
     .cg_all_content .cg_tab--item .cg_tab--btn{
-        border: 1px solid #585656;
+        border: 1px solid var(--fc-subtit);
         font-size: 12px;
         font-weight: var(--font-sb);
         padding: 10px 5px;
@@ -2599,7 +2601,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 15px;
-        padding: 15px 0;
+        padding: var(--mobile-padding) 0;
     }
     .donate_why--block .why--item .why_desc{
         flex: 1;
@@ -2707,7 +2709,7 @@
         margin-top: 60px;
     }
     .search_header--inner{
-        padding: 30px 15px;
+        padding: 30px var(--mobile-padding);
     }
     .search_header--inner .close--btn{
         top: 20%;

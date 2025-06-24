@@ -215,10 +215,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
-
 // // pc
 // mm.add("(min-width: 993px)", () => {});

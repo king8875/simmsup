@@ -395,9 +395,7 @@
         </div>
     </footer>
 
-
-
-
+    
     <script>
         // 실제 페이지 로드 완료 후
         window.addEventListener('load', () => {
@@ -406,6 +404,7 @@
             gsap.set('.sp_header--banner .text--block strong', {y:50});
             gsap.set('.sp_header--banner .text--block p', {y:50});
             gsap.set('.support_item',{autoAlpha:0, y:20});
+
             const preLoad = gsap.timeline({});
 
             preLoad.to('.sp_header--tit h2', { y: 0, duration: 0.7 });
@@ -413,12 +412,7 @@
             preLoad.to('.sp_header--banner .text--block p', { y:0 },"<+0.1");
             preLoad.to('.support_item',{autoAlpha:1, stagger:0.1, y:0},"<");
         });
-
     </script>
-
-
-
-
 </body>
 
 </html>

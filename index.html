@@ -771,13 +771,17 @@
             gsap.set('.hero_section .swiper', { height: '100vh' });
             gsap.set('.hero_swiper_control', { autoAlpha: 0 });
             gsap.set('.hero_swiper_btn--group', { autoAlpha: 0 });
+            gsap.set('.hero_content .tx--block .hero-subtit', { y:50 });
+            gsap.set('.hero_content .tx--block .hero-tit', { y:50,autoAlpha:0 });
 
             const preLoad = gsap.timeline({});
 
-            preLoad.to('.wrapper', { y: 0, duration: 0.8 });
-            preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.6 });
-            preLoad.to('.hero_swiper_control', { autoAlpha: 1 });
-            preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 });
+            preLoad.to('.wrapper', { y: 0, duration: 0.7 });
+            preLoad.to('.hero_section .swiper', { height: "75vh", duration: 1.2 });
+            preLoad.to('.hero_content .tx--block .hero-tit',{y:0, autoAlpha : 1});
+            preLoad.to('.hero_content .tx--block .hero-subtit',{y:0});
+            preLoad.to('.hero_swiper_control', { autoAlpha: 1 },"<");
+            preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 },"<");
             preLoad.to('.header', { y: 0 });
         });
         // hero swiper

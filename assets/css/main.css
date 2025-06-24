@@ -2252,6 +2252,7 @@
 
     .news_content .news_item .img--block {
         max-width: 150px;
+        min-width: 150px;
         border: 6px solid var(--primary-white);
     }
 
@@ -2427,7 +2428,7 @@
     }
     .ht_active--content .ht_active--item a .img--block{
         max-width: 150px;
-    
+        min-width: 150px;
     }
  
     /* manage page */

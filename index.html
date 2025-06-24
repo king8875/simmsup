@@ -771,7 +771,7 @@
             gsap.set('.hero_section .swiper', { height: '100vh' });
             gsap.set('.hero_swiper_control', { autoAlpha: 0 });
             gsap.set('.hero_swiper_btn--group', { autoAlpha: 0 });
-            gsap.set('.hero_content .tx--block .hero-subtit', { y:50 });
+            gsap.set('.hero_content .tx--block .hero-subtit', { y:100 });
             gsap.set('.hero_content .tx--block .hero-tit', { y:50,autoAlpha:0 });
 
             const preLoad = gsap.timeline({});
@@ -823,7 +823,7 @@
 
         // together gsap
         gsap.set(".tg--left", { autoAlpha: 0, y: 50 });
-        gsap.set(".tg--right .tg_btn--item", { autoAlpha: 0, });
+        gsap.set(".tg--right .tg_btn--item", { autoAlpha: 0, y:50});
         const together = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.together_section'),
@@ -831,18 +831,8 @@
                 end: "0% 70%",
             }
         });
-        together.to('.tg--left', {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.8
-        });
-        together.to('.tg--right .tg_btn--item', {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.6,
-            ease: "power4.out",
-            stagger: 0.3,
-        });
+        together.to('.tg--left', { autoAlpha: 1, y: 0, duration: 0.8 });
+        together.to('.tg--right .tg_btn--item', { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.3, });
 
 
         // project
@@ -850,10 +840,7 @@
         const pjcontent = document.querySelector('.project_section .pj_content--block');
 
         gsap.set(pjheader, { autoAlpha: 0 });
-        gsap.set(pjcontent, {
-            autoAlpha: 0,
-            y: 50
-        });
+        gsap.set(pjcontent, { autoAlpha: 0, y: 50 });
         const project = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.project_section'),
@@ -862,15 +849,8 @@
             }
         });
 
-        project.to(pjheader, {
-            autoAlpha: 1,
-            duration: 0.5
-        });
-        project.to(pjcontent, {
-            autoAlpha: 1,
-            duration: 0.5,
-            y: 0
-        });
+        project.to(pjheader, { autoAlpha: 1, duration: 0.5 });
+        project.to(pjcontent, { autoAlpha: 1, duration: 0.5, y: 0 });
 
 
         // news
@@ -878,10 +858,7 @@
         const newscontent = document.querySelectorAll('.news_section .news_item');
 
         gsap.set(newsheader, { autoAlpha: 0 });
-        gsap.set(newscontent, {
-            autoAlpha: 0,
-            y: 50
-        });
+        gsap.set(newscontent, { autoAlpha: 0, y: 50 });
         const news = gsap.timeline({
             scrollTrigger: {
                 trigger: document.querySelector('.news_content'),
@@ -890,16 +867,8 @@
             }
         });
 
-        project.to(newsheader, {
-            autoAlpha: 1,
-            duration: 0.5
-        });
-        project.to(newscontent, {
-            autoAlpha: 1,
-            duration: 0.5,
-            y: 0,
-            stagger: 0.3
-        });
+        project.to(newsheader, { autoAlpha: 1, duration: 0.5 });
+        project.to(newscontent, { autoAlpha: 1, duration: 0.5, y: 0, stagger: 0.3 });
         document.addEventListener("DOMContentLoaded", () => {
 
 

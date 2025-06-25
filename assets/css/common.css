@@ -269,92 +269,43 @@ strong {
 }
 
 
-/* keyframes 정의 */
+/* arrow 애니메이션 */
 @keyframes firstArrowOut {
-    to {
-        transform: translateX(100%);
-        opacity: 0;
-    }
+    to { transform: translateX(100%); opacity: 0; }
 }
 
 @keyframes secondArrowIn {
-    to {
-        transform: translateX(0%);
-        opacity: 1;
-    }
+    to { transform: translateX(0%); opacity: 1; }
 }
 
 @keyframes firstArrowIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0%);
-        opacity: 1;
-    }
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0%); opacity: 1; }
 }
 
 @keyframes secondArrowOut {
-    from {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
+    from { transform: translateX(0%); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
 }
 
 
 @media screen and (min-width:993px) {
-    .section {
-        padding: 100px 0;
-    }
+    .section { padding: 100px 0; }
 }
 
 @media screen and (max-width:992px) {
-    .section {
-        padding: 50px 0px;
-    }
-
-    .main-tit {
-        font-size: 28px;
-    }
-
-    .main-subtit {
-        font-size: 16px;
-    }
-
-    .bold_18 {
-        font-size: 16px !important;
-    }
-
-    .more--block span {
-        display: none;
-    }
-
-    .inner {
-        padding: 0 15px;
-
-    }
-    .about_wrapper .inner{
-        padding: 0 10px;
-    }
-
+    .section { padding: 50px 0px; }
+    .main-tit { font-size: 28px; }
+    .main-subtit { font-size: 16px; }
+    .bold_18 { font-size: 16px !important; }
+    .more--block span { display: none; }
+    .inner { padding: 0 15px; }
+    .about_wrapper .inner{ padding: 0 10px; }
     .section_header--block {
         justify-content: flex-start;
         gap: 15px;
         margin-bottom: 30px;
     }
-
-    .mt100{
-        margin-top: 50px;
-    }
-    .mt50{
-        margin-top: 25px;
-    }
-    
+    .mt100{ margin-top: 50px; }
+    .mt50{ margin-top: 25px; }
 }

@@ -80,12 +80,13 @@
 }
 
 /* hover했을시 */
+.search--list .search--item a:hover .first-arrow,
 .apply--item:hover .more--block .first-arrow,
 .more--block:hover .first-arrow,
 .notice_item.active:hover .first-arrow {
     animation: firstArrowOut 0.4s ease forwards;
 }
-
+.search--list .search--item a:hover .second-arrow,
 .apply--item:hover .more--block .second-arrow,
 .more--block:hover .second-arrow,
 .notice_item.active:hover .second-arrow {
@@ -93,11 +94,13 @@
 }
 
 /* not hover했을시 */
+.search--list .search--item a:not(:hover) .first-arrow,
 .apply--item:not(:hover) .more--block .first-arrow,
 .more--block:not(:hover) .first-arrow,
 .notice_item.active:not(:hover) .first-arrow {
     animation: firstArrowIn 0.4s ease forwards;
 }
+.search--list .search--item a:not(:hover) .second-arrow,
 .apply--item:not(:hover) .more--block .second-arrow,
 .more--block:not(:hover) .second-arrow,
 .notice_item.active:not(:hover) .second-arrow {

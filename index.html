@@ -364,7 +364,7 @@
                         
                         <ul class="grid_wrapper">
                             <li class="pj_img_box">
-                                <a href="" class="">
+                                <a href="">
                                     <div class="pj_img_border"></div>
                                     <img src="assets/img/main/project/pj_img01.jpg" alt="">
                                     <div class="pj_img_box-tx">
@@ -909,35 +909,35 @@
                 isPlaying = !isPlaying;
             });
 
-            const pjcontentbox = document.querySelectorAll('.pj_img_box');
+            // const pjcontentbox = document.querySelectorAll('.pj_img_box');
 
-            pjcontentbox.forEach(pjbox => {
-                pjbox.addEventListener('mouseenter', () => {
-                    pjbox.classList.add('lo-hover');
-                    pjbox.classList.add('lo-shadow');
-                });
+            // pjcontentbox.forEach(pjbox => {
+            //     pjbox.addEventListener('mouseenter', () => {
+            //         pjbox.classList.add('lo-hover');
+            //         pjbox.classList.add('lo-shadow');
+            //     });
 
-                pjbox.addEventListener('mouseleave', () => {
-                    pjbox.classList.remove('lo-hover');
-                    pjbox.classList.remove('lo-shadow');
-                });
-            });
+            //     pjbox.addEventListener('mouseleave', () => {
+            //         pjbox.classList.remove('lo-hover');
+            //         pjbox.classList.remove('lo-shadow');
+            //     });
+            // });
 
-            const newsboxLink = document.querySelectorAll('.news_content .news_item a');
+            // const newsboxLink = document.querySelectorAll('.news_content .news_item a');
 
-            newsboxLink.forEach(newsbox => {
-                const newsboxImg = newsbox.querySelector('.img--block');
+            // newsboxLink.forEach(newsbox => {
+            //     const newsboxImg = newsbox.querySelector('.img--block');
 
-                newsbox.addEventListener('mouseenter', function () {
-                    newsboxImg.classList.add('lo-hover');
-                    newsboxImg.classList.add('lo-shadow');
-                });
+            //     newsbox.addEventListener('mouseenter', function () {
+            //         newsboxImg.classList.add('lo-hover');
+            //         newsboxImg.classList.add('lo-shadow');
+            //     });
 
-                newsbox.addEventListener('mouseleave', function () {
-                    newsboxImg.classList.remove('lo-hover');
-                    newsboxImg.classList.remove('lo-shadow');
-                });
-            });
+            //     newsbox.addEventListener('mouseleave', function () {
+            //         newsboxImg.classList.remove('lo-hover');
+            //         newsboxImg.classList.remove('lo-shadow');
+            //     });
+            // });
         });
 
 

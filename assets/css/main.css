@@ -271,13 +271,15 @@
     top: 15%;
     left: 10%;
     /* background-image: url("assets/img/main/video/bg_img01.png"); */
-    background-image: url("../img/main/video/bg_img01.png");
+    background-image: url("/assets/img/main/video/bg_img01.png");
+
 }
 
 .video_deco_img02 {
     top: 90%;
     left: 80%;
-    background-image: url("../img/main/video/bg_img02.png");
+    /* background-image: url("../img/main/video/bg_img02.png"); */
+    background-image: url("/assets/img/main/video/bg_img02.png");
 }
 
 /* together */

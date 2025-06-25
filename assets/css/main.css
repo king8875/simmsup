@@ -1055,7 +1055,9 @@
     font-size: 20px;
     transition: all .4s ease;
 }
-
+.ht_swiper_control{
+    display: none;
+}
 
 
 /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
@@ -2289,6 +2291,9 @@
     }
     .project-tx-block.mo-v .pj-subtit{
         font-size: 14px;
+    }
+    .ht_swiper_control{
+        display: block;
     }
     .projects-sec--mob .btn{
         position: absolute;

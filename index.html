@@ -20,6 +20,9 @@
 
 <body>
 
+
+
+    
     <div class="side_menu_overlay z-index3">
         <span class="blind">사이드메뉴 오버레이</span>
     </div>
@@ -145,6 +148,9 @@
             </div>
         </div>
     </header>
+    
+
+
 
     <main>
         <div class="wrapper">
@@ -762,6 +768,10 @@
 
 
     <script>
+
+
+
+       
         // 실제 페이지 로드 완료 후
         window.addEventListener('load', () => {
 
@@ -782,6 +792,11 @@
             preLoad.to('.hero_swiper_control', { autoAlpha: 1 },"<");
             preLoad.to('.hero_swiper_btn--group', { autoAlpha: 1 },"<");
             preLoad.to('.header', { y: 0 });
+
+            headerInIt();
+            subheaderInIt();
+            sideMenuInIt();
+        
         });
         // hero swiper
         const slides = document.querySelectorAll('.hero_content .img--block');
@@ -968,6 +983,8 @@
             window.addEventListener('resize', () => {
             restructureGridItems();
         });
+
+     
 
 
     </script>

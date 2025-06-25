@@ -500,7 +500,7 @@
 .footer_toptop--btn .toptop_ic{}
 .footer_facebook--btn{ background: #3B5998; }
 .footer_instar--btn{
-    background: url(../img/footer/sns/instar_bg.png);
+    background: url("../img/footer/sns/instar_bg.png");
 }
 .footer_kakao--btn{ background: #FFE812; }
 
@@ -547,10 +547,6 @@
         margin-bottom: 28px;
     }
     
-    
-    
-    
-
     /* subpage header */
     .subPage_header--block {
         margin-top: calc(80px + 0px);
@@ -569,7 +565,6 @@
     .search_keyword ul li{
         font-size: 14px;
     }
-
 
     /* footer */
     .footer{

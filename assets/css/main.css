@@ -270,16 +270,14 @@
 .video_deco_img01 {
     top: 15%;
     left: 10%;
-    /* background-image: url("assets/img/main/video/bg_img01.png"); */
-    background-image: url("assets/img/main/video/bg_img01.png");
+    background: url("../img/main/video/bg_img01.png");
 
 }
 
 .video_deco_img02 {
     top: 90%;
     left: 80%;
-    /* background-image: url("../img/main/video/bg_img02.png"); */
-    background-image: url("assets/img/main/video/bg_img02.png");
+    background: url("../img/main/video/bg_img01.png");
 }
 
 /* together */
@@ -436,13 +434,7 @@
     transition: all .4s ease;
 
 }
-/* .pj_content--block .pj_img_box.first:hover .pj_img_border {
-    box-shadow: 0 0 0 10px var(--primary-white) inset;
-} */
 
-/* .pj_content--block .pj_img_box:hover .pj_img_border {
-    box-shadow: 0 0 0 5px var(--primary-white) inset;
-} */
 
 .pj_content--block .pj_img_box.first .pj_img_box-tx {
     position: absolute;
@@ -860,8 +852,7 @@
 .projects-sec {
     position: relative;
     height: 800vh;
-    /* overscroll-behavior-x: none !important; */
-    /* touch-action: pan-y !important;  */
+   
 }
 
 .projects-inner {
@@ -883,8 +874,6 @@
 .projects-inner .projects-list {
     display: flex;
     height: 100vh;
-    overscroll-behavior-x: none;
-    touch-action: pan-y; 
 }
 
 .projects-inner .projects-item {
